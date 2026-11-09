@@ -261,6 +261,20 @@ const batchStatePath = path.join(root, "data", "audit", "active-batch.json");
 let activeBatchQueue = null;
 let currentAuditContext = null;
 let lastCheckedOrderChangedAt = 0;
+let batchCollectionMode = false;
+
+async function syncBatchCollectionMode(enabled) {
+  batchCollectionMode = Boolean(enabled);
+  if (!context) return;
+  for (const page of context.pages()) {
+    for (const frame of page.frames()) {
+      await frame.evaluate((value) => {
+        window.__codexBatchCollectionMode = value;
+        window.__codexUpdateBatchTray?.();
+      }, batchCollectionMode).catch(() => {});
+    }
+  }
+}
 
 function enqueueBrowserCommand(command) {
   if (browserCommandResolver) {
@@ -288,12 +302,14 @@ async function waitForOperation() {
 }
 
 function installOrderClickListener() {
-  const listenerVersion = 6;
+  const listenerVersion = 7;
   if (window.__codexOrderClickVersion === listenerVersion) return;
+  for (const id of ["codex-order-confirm", "codex-batch-confirm", "codex-batch-mode-toggle", "codex-batch-tray"]) document.getElementById(id)?.remove();
   window.__codexOrderClickVersion = listenerVersion;
   window.__codexOrderClickInstalled = true;
   window.__codexBatchCollectionMode = false;
   window.__codexUpdateBatchTray = () => {
+    if (!location.href.includes("/app/order/order/list.aspx")) { document.getElementById("codex-batch-tray")?.remove(); return; }
     const toggle = document.getElementById("codex-batch-mode-toggle");
     if (toggle) {
       toggle.textContent = window.__codexBatchCollectionMode ? "连续抄单：已开启" : "连续抄单：关闭";
@@ -315,11 +331,14 @@ function installOrderClickListener() {
     tray.querySelector("#codex-batch-preview").onclick = () => window.__codexShowBatchConfirm?.();
   };
   const mountBatchToggle = () => {
+    if (!location.href.includes("/app/order/order/list.aspx")) return;
     if (!document.body || document.getElementById("codex-batch-mode-toggle")) return;
     const toggle = document.createElement("button"); toggle.id = "codex-batch-mode-toggle";
     toggle.style.cssText = "position:fixed;right:24px;bottom:24px;z-index:2147483645;padding:10px 16px;background:#555;color:#fff;border:0;border-radius:7px;box-shadow:0 8px 22px rgba(0,0,0,.24);font-family:Microsoft YaHei,sans-serif;font-weight:700";
-    toggle.onclick = () => {
-      window.__codexBatchCollectionMode = !window.__codexBatchCollectionMode;
+    toggle.onclick = async () => {
+      const enabled = !window.__codexBatchCollectionMode;
+      if (typeof window.__codexSetBatchCollectionMode === "function") await window.__codexSetBatchCollectionMode(enabled);
+      else window.__codexBatchCollectionMode = enabled;
       document.getElementById("codex-order-confirm")?.remove();
       document.getElementById("codex-batch-confirm")?.remove();
       window.__codexUpdateBatchTray();
@@ -491,6 +510,10 @@ function installOrderClickListener() {
 }
 
 async function setupOrderClickTracking(browserContext) {
+  await browserContext.exposeBinding("__codexSetBatchCollectionMode", async (_source, enabled) => {
+    await syncBatchCollectionMode(enabled);
+    return batchCollectionMode;
+  });
   await browserContext.exposeBinding("__codexRememberOrderClick", (source, orderId) => {
     if (!/^\d{7}$/.test(String(orderId || ""))) return;
     const changed = lastClickedOrder?.orderId !== String(orderId);
@@ -546,6 +569,7 @@ async function setupOrderClickTracking(browserContext) {
     };
   });
   await browserContext.exposeBinding("__codexConfirmBatch", async (source, infos) => {
+    await syncBatchCollectionMode(false);
     if (activeBatchQueue && !["completed", "paused"].includes(activeBatchQueue.status)) throw new Error("已有连续抄单批次正在执行");
     const orders = Array.isArray(infos) ? infos.filter((info) => info?.ready && /^\d{7}$/.test(String(info.orderId))) : [];
     if (orders.length < 2 || orders.length !== infos.length) throw new Error("批量预检未全部通过");
@@ -692,8 +716,7 @@ function startCheckedOrderMonitor(browserContext) {
         return;
       }
       if (activeBatchQueue && ["ready", "running"].includes(activeBatchQueue.status)) return;
-      const isCollectingBatch = await found.frame.evaluate(() => Boolean(window.__codexBatchCollectionMode)).catch(() => false);
-      if (isCollectingBatch) return;
+      if (batchCollectionMode) return;
       if (signature !== lastCheckedOrderSignature) {
         lastCheckedOrderSignature = signature;
         lastCheckedOrderChangedAt = Date.now();

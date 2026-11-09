@@ -1,0 +1,13 @@
+import fs from "node:fs";
+import path from "node:path";
+const file = path.resolve(import.meta.dirname, "../src/index.js");
+let s = fs.readFileSync(file, "utf8");
+const from = `  if (window.__codexOrderClickVersion === listenerVersion) return;
+  window.__codexOrderClickVersion = listenerVersion;`;
+const to = `  if (window.__codexOrderClickVersion === listenerVersion) return;
+  for (const id of ["codex-order-confirm", "codex-batch-confirm", "codex-batch-mode-toggle", "codex-batch-tray"]) document.getElementById(id)?.remove();
+  window.__codexOrderClickVersion = listenerVersion;`;
+if (!s.includes(from)) throw new Error("listener anchor missing");
+s = s.replace(from, to);
+fs.writeFileSync(file, s, "utf8");
+console.log("added stale listener UI cleanup");
