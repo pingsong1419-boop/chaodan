@@ -1,0 +1,33 @@
+{
+  "provider": "zhipu",
+  "temperature": 0,
+  "jsonMode": true,
+  "timeoutMs": 20000,
+  "providers": {
+    "zhipu": {
+      "label": "智谱 GLM-4-Flash（永久免费，注册不绑卡）",
+      "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+      "model": "glm-4-flash",
+      "apiKey": "",
+      "signupUrl": "https://open.bigmodel.cn/",
+      "note": "注册后到「API Keys」页面新建一个，粘到 apiKey 即可。并发 30，不收费。"
+    },
+    "kimi": {
+      "label": "Kimi / 月之暗面（付费，无免费档，最低充 $1）",
+      "baseUrl": "https://api.moonshot.cn/v1",
+      "model": "kimi-k2.5",
+      "apiKey": "",
+      "signupUrl": "https://platform.moonshot.cn/",
+      "omitTemperature": false,
+      "note": "① 国内用 api.moonshot.cn，海外用 api.moonshot.ai；② 老的 moonshot-v1-8k/32k/128k 已于 2026-08-31 下线，别再用；③ 若改用 K3，必须把 omitTemperature 改成 true（K3 固定 temperature=1.0、top_p=0.95）。"
+    },
+    "deepseek": {
+      "label": "DeepSeek（付费，约 ¥1.5/百万输入 tokens）",
+      "baseUrl": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "apiKey": "",
+      "signupUrl": "https://platform.deepseek.com/",
+      "note": "老的 deepseek-chat / deepseek-reasoner 已于 2026-07-24 下线，现行模型名是 deepseek-flash，用前建议到官网核对一次。"
+    }
+  }
+}

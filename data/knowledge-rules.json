@@ -1,0 +1,1787 @@
+{
+  "clampStandardAllowedColors": [
+    "白色1#",
+    "米白11#",
+    "灰色2#"
+  ],
+  "unsupportedStandardHoodCategories": [
+    "香格里拉帘",
+    "依云帘"
+  ],
+  "hoodRules": {
+    "4001": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光粗网格白色",
+      "rawCode": "4001",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "4002": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光粗网格浅灰",
+      "rawCode": "4002",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "4005": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光粗网格米黄",
+      "rawCode": "4005",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "4010": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光粗网格深灰",
+      "rawCode": "4010",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "4021": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光细网格白色",
+      "rawCode": "4021",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "4022": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光细网格浅灰",
+      "rawCode": "4022",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "4025": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光细网格米肉",
+      "rawCode": "4025",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "4037": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "半遮光细网格深灰",
+      "rawCode": "4037",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "4102": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "高遮光密网格浅灰",
+      "rawCode": "4102",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "4105": {
+      "category": "卷帘 阳光面料",
+      "fabricName": "高遮光密网格米黄",
+      "rawCode": "4105",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "6601": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光白色",
+      "rawCode": "6601",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "6602": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光浅灰",
+      "rawCode": "6602",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "6603": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光蓝色",
+      "rawCode": "6603",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "6605": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光米黄",
+      "rawCode": "6605",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "6608": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光咖色",
+      "rawCode": "6608",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "6612": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光深灰",
+      "rawCode": "6612",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "6615": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光赭石",
+      "rawCode": "6615",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "6616": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光果绿",
+      "rawCode": "6616",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "6621": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "半遮光防水白色",
+      "rawCode": "6621",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "6695": {
+      "category": "A类无涂层",
+      "fabricName": "半遮光仿麻白",
+      "rawCode": "6695",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "6698": {
+      "category": "A类无涂层",
+      "fabricName": "半遮光仿麻灰",
+      "rawCode": "6698",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "7261": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水白色",
+      "rawCode": "7261",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "7264": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水淡蓝色",
+      "rawCode": "7264",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "7265": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水淡黄色",
+      "rawCode": "7265",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "7268": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水浅灰色",
+      "rawCode": "7268",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "7270": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水亚光黑",
+      "rawCode": "7270",
+      "standardHood": "米白11#",
+      "deluxeHood": "黑色10#",
+      "supportsStandard": true
+    },
+    "7271": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水素白",
+      "rawCode": "7271",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "7276": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水浅绿色",
+      "rawCode": "7276",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "7278": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水深灰色",
+      "rawCode": "7278",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "7279": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "防水浅咖色",
+      "rawCode": "7279",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8243": {
+      "category": "8025",
+      "fabricName": "亚麻蓝色",
+      "rawCode": "8243",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "8246": {
+      "category": "8025",
+      "fabricName": "亚麻香槟色",
+      "rawCode": "8246",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "8250": {
+      "category": "8025",
+      "fabricName": "亚麻褐色",
+      "rawCode": "8250",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "8252": {
+      "category": "8025",
+      "fabricName": "亚麻灰色",
+      "rawCode": "8252",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8255": {
+      "category": "8025",
+      "fabricName": "亚麻肉色",
+      "rawCode": "8255",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "8257": {
+      "category": "8025",
+      "fabricName": "亚麻咖啡色",
+      "rawCode": "8257",
+      "standardHood": "香槟27#",
+      "deluxeHood": "褐色28#",
+      "supportsStandard": true
+    },
+    "8261": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光白色",
+      "rawCode": "8261",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "8262": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光浅灰",
+      "rawCode": "8262",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8263": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光蓝色",
+      "rawCode": "8263",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "8265": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光米黄",
+      "rawCode": "8265",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "8272": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光深灰",
+      "rawCode": "8272",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8273": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光湖蓝",
+      "rawCode": "8273",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "8276": {
+      "category": "卷帘 半遮光 全遮光 防水全遮光",
+      "fabricName": "全遮光果绿",
+      "rawCode": "8276",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "8281": {
+      "category": "8025",
+      "fabricName": "细麻米白色",
+      "rawCode": "8281",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "8284": {
+      "category": "8025",
+      "fabricName": "细麻浅蓝色",
+      "rawCode": "8284",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "8285": {
+      "category": "8025",
+      "fabricName": "细麻米黄色",
+      "rawCode": "8285",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "8288": {
+      "category": "8025",
+      "fabricName": "细麻灰色",
+      "rawCode": "8288",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8289": {
+      "category": "8025",
+      "fabricName": "细麻褐色",
+      "rawCode": "8289",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "8290": {
+      "category": "A类无涂层",
+      "fabricName": "全遮光细麻烟墨灰",
+      "rawCode": "8290",
+      "standardHood": "米白11#",
+      "deluxeHood": "黑色10#",
+      "supportsStandard": true
+    },
+    "8292": {
+      "category": "A类无涂层",
+      "fabricName": "全遮光细麻灰雾蓝",
+      "rawCode": "8292",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "8295": {
+      "category": "A类无涂层",
+      "fabricName": "全遮光细麻淡奶米",
+      "rawCode": "8295",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "8297": {
+      "category": "A类无涂层",
+      "fabricName": "全遮光细麻奶茶咖",
+      "rawCode": "8297",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "8298": {
+      "category": "A类无涂层",
+      "fabricName": "全遮光细麻高级灰",
+      "rawCode": "8298",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9001": {
+      "category": "8000",
+      "fabricName": "防水白色",
+      "rawCode": "9001",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9002": {
+      "category": "8000",
+      "fabricName": "防水灰色",
+      "rawCode": "9002",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9003": {
+      "category": "8000",
+      "fabricName": "防水淡蓝",
+      "rawCode": "9003",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "9005": {
+      "category": "8000",
+      "fabricName": "防水米黄",
+      "rawCode": "9005",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9007": {
+      "category": "8000",
+      "fabricName": "防水粉色",
+      "rawCode": "9007",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9009": {
+      "category": "8000",
+      "fabricName": "防水棕色",
+      "rawCode": "9009",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9012": {
+      "category": "8000",
+      "fabricName": "防水仿亚麻灰色",
+      "rawCode": "9012",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9015": {
+      "category": "8000",
+      "fabricName": "防水仿亚麻白色",
+      "rawCode": "9015",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9018": {
+      "category": "8000",
+      "fabricName": "防水仿亚麻黄色",
+      "rawCode": "9018",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9021": {
+      "category": "8003",
+      "fabricName": "高精密小恐龙",
+      "rawCode": "9021",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9024": {
+      "category": "8003",
+      "fabricName": "绿野仙踪",
+      "rawCode": "9024",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9221": {
+      "category": "8009",
+      "fabricName": "仿亚麻米色",
+      "rawCode": "9221",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9222": {
+      "category": "8009",
+      "fabricName": "仿亚麻灰色",
+      "rawCode": "9222",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9228": {
+      "category": "8009",
+      "fabricName": "仿亚麻咖啡色",
+      "rawCode": "9228",
+      "standardHood": "香槟27#",
+      "deluxeHood": "褐色28#",
+      "supportsStandard": true
+    },
+    "9229": {
+      "category": "8009",
+      "fabricName": "仿亚麻褐色",
+      "rawCode": "9229",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9300": {
+      "category": "8005",
+      "fabricName": "防亚麻灰色",
+      "rawCode": "9300",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9301": {
+      "category": "8005",
+      "fabricName": "防亚麻浅灰",
+      "rawCode": "9301",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9304": {
+      "category": "8005",
+      "fabricName": "防亚麻绿色",
+      "rawCode": "9304",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9306": {
+      "category": "8005",
+      "fabricName": "防亚麻肉色",
+      "rawCode": "9306",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9308": {
+      "category": "8005",
+      "fabricName": "防亚麻棕色",
+      "rawCode": "9308",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9512": {
+      "category": "8061防水免打孔",
+      "fabricName": "黑纱灰色",
+      "rawCode": "9512",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9513": {
+      "category": "8061防水免打孔",
+      "fabricName": "黑纱蓝色",
+      "rawCode": "9513",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "9518": {
+      "category": "8061防水免打孔",
+      "fabricName": "黑纱咖啡色",
+      "rawCode": "9518",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9583": {
+      "category": "8021",
+      "fabricName": "米白蓝",
+      "rawCode": "9583",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "9585": {
+      "category": "8021",
+      "fabricName": "米白咖",
+      "rawCode": "9585",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9588": {
+      "category": "8021",
+      "fabricName": "褐米咖",
+      "rawCode": "9588",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9589": {
+      "category": "8021",
+      "fabricName": "黑灰褐",
+      "rawCode": "9589",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9592": {
+      "category": "8004",
+      "fabricName": "银底金花",
+      "rawCode": "9592",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9595": {
+      "category": "8004",
+      "fabricName": "金底紫花",
+      "rawCode": "9595",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9601": {
+      "category": "8000",
+      "fabricName": "防水高精密白色",
+      "rawCode": "9601",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9602": {
+      "category": "8000",
+      "fabricName": "防水高精密灰色",
+      "rawCode": "9602",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9605": {
+      "category": "8000",
+      "fabricName": "防水高精密米色",
+      "rawCode": "9605",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9621": {
+      "category": "8000",
+      "fabricName": "防水高精密雅白",
+      "rawCode": "9621",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9662": {
+      "category": "8023",
+      "fabricName": "银灰色",
+      "rawCode": "9662",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9663": {
+      "category": "8023",
+      "fabricName": "天蓝色",
+      "rawCode": "9663",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "9665": {
+      "category": "8023",
+      "fabricName": "米色",
+      "rawCode": "9665",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9667": {
+      "category": "8023",
+      "fabricName": "浅棕色",
+      "rawCode": "9667",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9668": {
+      "category": "8023",
+      "fabricName": "深灰色",
+      "rawCode": "9668",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9669": {
+      "category": "8023",
+      "fabricName": "棕色",
+      "rawCode": "9669",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9681": {
+      "category": "8020",
+      "fabricName": "浅米色",
+      "rawCode": "9681",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9682": {
+      "category": "8020",
+      "fabricName": "灰色",
+      "rawCode": "9682",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9683": {
+      "category": "8020",
+      "fabricName": "淡蓝",
+      "rawCode": "9683",
+      "standardHood": "蓝色3#",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": true
+    },
+    "9685": {
+      "category": "8020",
+      "fabricName": "米色",
+      "rawCode": "9685",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9686": {
+      "category": "8020",
+      "fabricName": "绿色",
+      "rawCode": "9686",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9687": {
+      "category": "8020",
+      "fabricName": "浅棕",
+      "rawCode": "9687",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9688": {
+      "category": "8020",
+      "fabricName": "咖啡色",
+      "rawCode": "9688",
+      "standardHood": "香槟27#",
+      "deluxeHood": "深咖9#",
+      "supportsStandard": true
+    },
+    "9691": {
+      "category": "8004",
+      "fabricName": "水墨丹青",
+      "rawCode": "9691",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9695": {
+      "category": "8004",
+      "fabricName": "简欧典雅",
+      "rawCode": "9695",
+      "standardHood": "米黄5#",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": true
+    },
+    "9761": {
+      "category": "8024",
+      "fabricName": "黑纱仿亚麻银白色",
+      "rawCode": "9761",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9762": {
+      "category": "8024",
+      "fabricName": "黑纱仿亚麻灰色",
+      "rawCode": "9762",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9765": {
+      "category": "8024",
+      "fabricName": "黑纱仿亚麻米黄色",
+      "rawCode": "9765",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9768": {
+      "category": "8024",
+      "fabricName": "黑纱仿亚麻咖色",
+      "rawCode": "9768",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9771": {
+      "category": "8022雪尼尔全遮",
+      "fabricName": "珍珠白",
+      "rawCode": "9771",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9772": {
+      "category": "8022雪尼尔全遮",
+      "fabricName": "银灰色",
+      "rawCode": "9772",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9775": {
+      "category": "8022雪尼尔全遮",
+      "fabricName": "浅米色",
+      "rawCode": "9775",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "9778": {
+      "category": "8022雪尼尔全遮",
+      "fabricName": "可可棕",
+      "rawCode": "9778",
+      "standardHood": "香槟27#",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": true
+    },
+    "9861": {
+      "category": "8023",
+      "fabricName": "Pro Max全遮光白色",
+      "rawCode": "9861",
+      "standardHood": "白色1#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9862": {
+      "category": "8023",
+      "fabricName": "Pro Max全遮光灰色",
+      "rawCode": "9862",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9881": {
+      "category": "8025",
+      "fabricName": "抑菌全遮光银白色",
+      "rawCode": "9881",
+      "standardHood": "米白11#",
+      "deluxeHood": "白色1#",
+      "supportsStandard": true
+    },
+    "9882": {
+      "category": "8025",
+      "fabricName": "抑菌全遮光浅灰色",
+      "rawCode": "9882",
+      "standardHood": "灰色2#",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": true
+    },
+    "9885": {
+      "category": "8025",
+      "fabricName": "抑菌全遮光浅黄色",
+      "rawCode": "9885",
+      "standardHood": "米白11#",
+      "deluxeHood": "米白11#",
+      "supportsStandard": true
+    },
+    "13001": {
+      "category": "香格里拉帘",
+      "fabricName": "白色半遮光",
+      "rawCode": "13001",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "13002": {
+      "category": "香格里拉帘",
+      "fabricName": "灰色半遮光",
+      "rawCode": "13002",
+      "standardHood": "/",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": false
+    },
+    "13003": {
+      "category": "香格里拉帘",
+      "fabricName": "淡蓝色半遮光",
+      "rawCode": "13003",
+      "standardHood": "/",
+      "deluxeHood": "蓝色3#",
+      "supportsStandard": false
+    },
+    "13005": {
+      "category": "香格里拉帘",
+      "fabricName": "米黄色半遮光",
+      "rawCode": "13005",
+      "standardHood": "/",
+      "deluxeHood": "米白11#",
+      "supportsStandard": false
+    },
+    "13008": {
+      "category": "香格里拉帘",
+      "fabricName": "酒红色半遮光",
+      "rawCode": "13008",
+      "standardHood": "/",
+      "deluxeHood": "香槟17#",
+      "supportsStandard": false
+    },
+    "13009": {
+      "category": "香格里拉帘",
+      "fabricName": "棕色半遮光",
+      "rawCode": "13009",
+      "standardHood": "/",
+      "deluxeHood": "褐色28#",
+      "supportsStandard": false
+    },
+    "13011": {
+      "category": "香格里拉帘",
+      "fabricName": "防眩网白色",
+      "rawCode": "13011",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "13012": {
+      "category": "香格里拉帘",
+      "fabricName": "防眩网灰色",
+      "rawCode": "13012",
+      "standardHood": "/",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": false
+    },
+    "13015": {
+      "category": "香格里拉帘",
+      "fabricName": "防眩网米黄色",
+      "rawCode": "13015",
+      "standardHood": "/",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": false
+    },
+    "13101": {
+      "category": "香格里拉帘",
+      "fabricName": "仿麻白半遮光",
+      "rawCode": "13101",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "13111": {
+      "category": "香格里拉帘",
+      "fabricName": "肌理纹防眩网白色",
+      "rawCode": "13111",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "13112": {
+      "category": "香格里拉帘",
+      "fabricName": "肌理纹防眩网灰色",
+      "rawCode": "13112",
+      "standardHood": "/",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": false
+    },
+    "13115": {
+      "category": "香格里拉帘",
+      "fabricName": "肌理纹防眩网米黄色",
+      "rawCode": "13115",
+      "standardHood": "/",
+      "deluxeHood": "米黄5#",
+      "supportsStandard": false
+    },
+    "13161": {
+      "category": "香格里拉帘",
+      "fabricName": "白色高遮光",
+      "rawCode": "13161",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "13162": {
+      "category": "香格里拉帘",
+      "fabricName": "灰色全遮光",
+      "rawCode": "13162",
+      "standardHood": "/",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": false
+    },
+    "13166": {
+      "category": "香格里拉帘",
+      "fabricName": "香槟色高遮光",
+      "rawCode": "13166",
+      "standardHood": "/",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": false
+    },
+    "13168": {
+      "category": "香格里拉帘",
+      "fabricName": "棕色高遮光",
+      "rawCode": "13168",
+      "standardHood": "/",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": false
+    },
+    "20001": {
+      "category": "依云帘",
+      "fabricName": "白色",
+      "rawCode": "20001",
+      "standardHood": "/",
+      "deluxeHood": "白色1#",
+      "supportsStandard": false
+    },
+    "20002": {
+      "category": "依云帘",
+      "fabricName": "灰色",
+      "rawCode": "20002",
+      "standardHood": "/",
+      "deluxeHood": "灰色2#",
+      "supportsStandard": false
+    },
+    "20005": {
+      "category": "依云帘",
+      "fabricName": "米黄",
+      "rawCode": "20005",
+      "standardHood": "/",
+      "deluxeHood": "米白11#",
+      "supportsStandard": false
+    },
+    "20015": {
+      "category": "依云帘",
+      "fabricName": "浅棕",
+      "rawCode": "20015",
+      "standardHood": "/",
+      "deluxeHood": "香槟27#",
+      "supportsStandard": false
+    }
+  },
+  "honeycombTrackRules": {
+    "12000": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光白色",
+      "rawCode": "12000",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12002": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光灰色",
+      "rawCode": "12002",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12003": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光蓝色",
+      "rawCode": "12003",
+      "deluxeTrack": "3#蓝",
+      "cordlessTrack": "1#白"
+    },
+    "12005": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光浅黄",
+      "rawCode": "12005",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12006": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光浅绿",
+      "rawCode": "12006",
+      "deluxeTrack": "6#绿",
+      "cordlessTrack": "1#白"
+    },
+    "12010": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光黑色",
+      "rawCode": "12010",
+      "deluxeTrack": "10#黑",
+      "cordlessTrack": "1#白"
+    },
+    "12011": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光白色",
+      "rawCode": "12011",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12012": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光蓝色",
+      "rawCode": "12012",
+      "deluxeTrack": "3#蓝",
+      "cordlessTrack": "1#白"
+    },
+    "12013": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光黄色",
+      "rawCode": "12013",
+      "deluxeTrack": "5#黄",
+      "cordlessTrack": "1#白"
+    },
+    "12015": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光绿色",
+      "rawCode": "12015",
+      "deluxeTrack": "6#绿",
+      "cordlessTrack": "1#白"
+    },
+    "12017": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮浅咖色",
+      "rawCode": "12017",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12018": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光浅灰",
+      "rawCode": "12018",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12019": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光米白",
+      "rawCode": "12019",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12022": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮曼午灰",
+      "rawCode": "12022",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12023": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光海盐蓝",
+      "rawCode": "12023",
+      "deluxeTrack": "3#蓝",
+      "cordlessTrack": "1#白"
+    },
+    "12026": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光时光绿",
+      "rawCode": "12026",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12027": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光波普粉",
+      "rawCode": "12027",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12029": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光月瓷白",
+      "rawCode": "12029",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12031": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm全遮光菱花白",
+      "rawCode": "12031",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12032": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm全遮光薄雾灰",
+      "rawCode": "12032",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12039": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm全遮光奶油杏",
+      "rawCode": "12039",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12081": {
+      "spec": "蜂巢帘2.6cm防水正反同色",
+      "fabricName": "防水全遮光白色",
+      "rawCode": "12081",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12082": {
+      "spec": "蜂巢帘2.6cm防水正反同色",
+      "fabricName": "防水全遮光灰色",
+      "rawCode": "12082",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12085": {
+      "spec": "蜂巢帘2.6cm防水正反同色",
+      "fabricName": "防水全遮光米黄",
+      "rawCode": "12085",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12100": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光黑色",
+      "rawCode": "12100",
+      "deluxeTrack": "10#黑",
+      "cordlessTrack": "1#白"
+    },
+    "12101": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "防水半遮光白色",
+      "rawCode": "12101",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12103": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光海盐蓝",
+      "rawCode": "12103",
+      "deluxeTrack": "3#蓝",
+      "cordlessTrack": "1#白"
+    },
+    "12106": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光时光绿",
+      "rawCode": "12106",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12107": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光波普粉",
+      "rawCode": "12107",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12109": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "半遮光月瓷白",
+      "rawCode": "12109",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12119": {
+      "spec": "蜂巢帘2.6cm反面白色",
+      "fabricName": "全遮光奶杏色",
+      "rawCode": "12119",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12131": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹半遮光雪绒白",
+      "rawCode": "12131",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12132": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹半遮光清雅灰",
+      "rawCode": "12132",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12135": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹半遮光法式杏",
+      "rawCode": "12135",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12151": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm半遮光厚云白",
+      "rawCode": "12151",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12152": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm半遮光迷雾灰",
+      "rawCode": "12152",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12155": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm半遮光奶杏色",
+      "rawCode": "12155",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12161": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹全遮光月光白",
+      "rawCode": "12161",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12162": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹全遮光云烟灰",
+      "rawCode": "12162",
+      "deluxeTrack": "2#灰",
+      "cordlessTrack": "2#灰"
+    },
+    "12165": {
+      "spec": "蜂巢帘  3.8缎纹反面白色",
+      "fabricName": "3.8缎纹全遮光奶茶色",
+      "rawCode": "12165",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12181": {
+      "spec": "孔中孔",
+      "fabricName": "3.8cm孔中孔白色",
+      "rawCode": "12181",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12185": {
+      "spec": "孔中孔",
+      "fabricName": "3.8cm孔中孔米色",
+      "rawCode": "12185",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    },
+    "12201": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm半遮光仿麻",
+      "rawCode": "12201",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12211": {
+      "spec": "蜂巢帘3.8cm反面白色",
+      "fabricName": "3.8cm全遮光仿麻",
+      "rawCode": "12211",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12251": {
+      "spec": "3.8机织布",
+      "fabricName": "半遮光暖云白",
+      "rawCode": "12251",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12261": {
+      "spec": "3.8机织布",
+      "fabricName": "全遮光暖云白",
+      "rawCode": "12261",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12262": {
+      "spec": "3.8机织布",
+      "fabricName": "全遮光布纹灰",
+      "rawCode": "12262",
+      "deluxeTrack": "1#白",
+      "cordlessTrack": "1#白"
+    },
+    "12265": {
+      "spec": "3.8机织布",
+      "fabricName": "全遮光奶沙杏",
+      "rawCode": "12265",
+      "deluxeTrack": "11#米白",
+      "cordlessTrack": "11#米白"
+    }
+  },
+  "mainPictureModels": {
+    "1001": {
+      "productName": "1001",
+      "fullDescription": "米色M-9685",
+      "modelCode": "9685",
+      "category": "定制窗帘"
+    },
+    "1002": {
+      "productName": "1002",
+      "fullDescription": "亚麻灰色M-8252",
+      "modelCode": "8252",
+      "category": "定制窗帘"
+    },
+    "1003": {
+      "productName": "1003",
+      "fullDescription": "标准哑光白色M-2711",
+      "modelCode": "2711",
+      "category": "定制窗帘"
+    },
+    "1004": {
+      "productName": "1004",
+      "fullDescription": "白色半遮光M-13001",
+      "modelCode": "13001",
+      "category": "定制窗帘"
+    },
+    "1005": {
+      "productName": "1005",
+      "fullDescription": "象牙白M-0071",
+      "modelCode": "0071",
+      "category": "定制窗帘"
+    },
+    "1006": {
+      "productName": "1006",
+      "fullDescription": "全遮光咖色M-8268",
+      "modelCode": "8268",
+      "category": "定制窗帘"
+    },
+    "1007": {
+      "productName": "1007",
+      "fullDescription": "全遮光深灰M-8272",
+      "modelCode": "8272",
+      "category": "定制窗帘"
+    },
+    "2000": {
+      "productName": "2000",
+      "fullDescription": "半遮光 朦胧 素静白M-16061",
+      "modelCode": "16061",
+      "category": "定制窗帘"
+    },
+    "5002": {
+      "productName": "5002",
+      "fullDescription": "日帘:白纱M-12051                                      夜帘：全遮光奶杏色12119",
+      "modelCode": "12051",
+      "category": "蜂巢帘"
+    },
+    "5003": {
+      "productName": "5003",
+      "fullDescription": "全遮光奶杏色M-12119",
+      "modelCode": "12119",
+      "category": "蜂巢帘"
+    },
+    "5004": {
+      "productName": "5004",
+      "fullDescription": "半遮白色M-12000",
+      "modelCode": "12000",
+      "category": "蜂巢帘"
+    },
+    "5006": {
+      "productName": "5006",
+      "fullDescription": "全遮光 奶油杏M-12039",
+      "modelCode": "12039",
+      "category": "蜂巢帘"
+    },
+    "6002": {
+      "productName": "6002",
+      "fullDescription": "哑光尊贵银M-2518",
+      "modelCode": "2518",
+      "category": "百叶帘"
+    },
+    "6003": {
+      "productName": "6003",
+      "fullDescription": "3.5CM加宽哑光米黄M-3535",
+      "modelCode": "3535",
+      "category": "百叶帘"
+    },
+    "6004": {
+      "productName": "6004",
+      "fullDescription": "哑光白色M-2301",
+      "modelCode": "2301",
+      "category": "百叶帘"
+    },
+    "6005": {
+      "productName": "6005",
+      "fullDescription": "L片哑光浩瀚黑M-2910",
+      "modelCode": "2910",
+      "category": "百叶帘"
+    },
+    "6008": {
+      "productName": "6008",
+      "fullDescription": "哑光尊贵银M-2518",
+      "modelCode": "2518",
+      "category": "百叶帘"
+    },
+    "6010": {
+      "productName": "6010",
+      "fullDescription": "哑光白色M-2711",
+      "modelCode": "2711",
+      "category": "百叶帘"
+    },
+    "6011": {
+      "productName": "6011",
+      "fullDescription": "哑光白色M-2711",
+      "modelCode": "2711",
+      "category": "百叶帘"
+    },
+    "6012": {
+      "productName": "6012",
+      "fullDescription": "哑光白色M-2601",
+      "modelCode": "2601",
+      "category": "百叶帘"
+    },
+    "6015": {
+      "productName": "6015",
+      "fullDescription": "铝合金哑光奶油色M-2719",
+      "modelCode": "2719",
+      "category": "百叶帘"
+    },
+    "6024": {
+      "productName": "6024",
+      "fullDescription": "【哑光】白色",
+      "modelCode": "",
+      "category": "百叶帘"
+    },
+    "6025": {
+      "productName": "6025",
+      "fullDescription": "L片哑光白色M-2911",
+      "modelCode": "2911",
+      "category": "百叶帘"
+    },
+    "6035": {
+      "productName": "6035",
+      "fullDescription": "铝合金奶油色M-2919",
+      "modelCode": "2919",
+      "category": "百叶帘"
+    },
+    "6804": {
+      "productName": "6804",
+      "fullDescription": "M-0077实木 胡桃色",
+      "modelCode": "0077",
+      "category": "百叶帘"
+    },
+    "6806": {
+      "productName": "6806",
+      "fullDescription": "半遮光方格灰色M-50022",
+      "modelCode": "50022",
+      "category": "百叶帘"
+    },
+    "7005": {
+      "productName": "7005",
+      "fullDescription": "半遮光仿亚麻白色M-5881",
+      "modelCode": "5881",
+      "category": "定制窗帘"
+    },
+    "8000": {
+      "productName": "8000",
+      "fullDescription": "防水灰色M-9002",
+      "modelCode": "9002",
+      "category": "卷帘"
+    },
+    "8003": {
+      "productName": "8003",
+      "fullDescription": "绿野仙踪M-9024",
+      "modelCode": "9024",
+      "category": "卷帘"
+    },
+    "8005": {
+      "productName": "8005",
+      "fullDescription": "仿亚麻灰色M-9300",
+      "modelCode": "9300",
+      "category": "卷帘"
+    },
+    "8020": {
+      "productName": "8020",
+      "fullDescription": "淡蓝M-9683",
+      "modelCode": "9683",
+      "category": "卷帘"
+    },
+    "8022": {
+      "productName": "8022",
+      "fullDescription": "全遮光浅米色M-9775",
+      "modelCode": "9775",
+      "category": "卷帘"
+    },
+    "8023": {
+      "productName": "8023",
+      "fullDescription": "米色M-9665",
+      "modelCode": "9665",
+      "category": "卷帘"
+    },
+    "8024": {
+      "productName": "8024",
+      "fullDescription": "黑纱仿亚麻灰色M-9762",
+      "modelCode": "9762",
+      "category": "卷帘"
+    },
+    "8025": {
+      "productName": "8025",
+      "fullDescription": "抑菌全遮光浅灰色M-9882",
+      "modelCode": "9882",
+      "category": "卷帘"
+    },
+    "8062": {
+      "productName": "8062",
+      "fullDescription": "米色M-9665",
+      "modelCode": "9665",
+      "category": "卷帘"
+    },
+    "8063": {
+      "productName": "8063",
+      "fullDescription": "高精密【月光白】M-9601",
+      "modelCode": "9601",
+      "category": "卷帘"
+    },
+    "8604": {
+      "productName": "8604",
+      "fullDescription": "6.5cm肌理纹防眩网白色M-13111",
+      "modelCode": "13111",
+      "category": "卷帘"
+    },
+    "8607": {
+      "productName": "8607",
+      "fullDescription": "半遮光机织白色M-13181",
+      "modelCode": "13181",
+      "category": "卷帘"
+    },
+    "8609": {
+      "productName": "8609",
+      "fullDescription": "半遮光 防水 月光白M-13051",
+      "modelCode": "13051",
+      "category": "卷帘"
+    },
+    "8700": {
+      "productName": "8700",
+      "fullDescription": "白色M-20001",
+      "modelCode": "20001",
+      "category": "卷帘"
+    },
+    "8812": {
+      "productName": "8812",
+      "fullDescription": "全遮光浅灰M-8262",
+      "modelCode": "8262",
+      "category": "卷帘"
+    },
+    "8815": {
+      "productName": "8815",
+      "fullDescription": "细麻米白色M-8281",
+      "modelCode": "8281",
+      "category": "卷帘"
+    },
+    "8818": {
+      "productName": "8818",
+      "fullDescription": "全遮光浅灰M-8262",
+      "modelCode": "8262",
+      "category": "卷帘"
+    },
+    "8819": {
+      "productName": "8819",
+      "fullDescription": "细麻米白M-8281",
+      "modelCode": "8281",
+      "category": "卷帘"
+    },
+    "8820": {
+      "productName": "8820",
+      "fullDescription": "半遮光白色M-6601",
+      "modelCode": "6601",
+      "category": "卷帘"
+    },
+    "8825": {
+      "productName": "8825",
+      "fullDescription": "全遮光细麻高级灰M-8298",
+      "modelCode": "8298",
+      "category": "卷帘"
+    },
+    "8831": {
+      "productName": "8831",
+      "fullDescription": "亚麻灰色M-8252",
+      "modelCode": "8252",
+      "category": "卷帘"
+    },
+    "8839": {
+      "productName": "8839",
+      "fullDescription": "防水全遮光 白色M-7261",
+      "modelCode": "7261",
+      "category": "卷帘"
+    },
+    "8862": {
+      "productName": "8862",
+      "fullDescription": "防水白色M-7261",
+      "modelCode": "7261",
+      "category": "卷帘"
+    },
+    "8863": {
+      "productName": "8863",
+      "fullDescription": "防水白色M-7261",
+      "modelCode": "7261",
+      "category": "卷帘"
+    },
+    "8865": {
+      "productName": "8865",
+      "fullDescription": "亚麻咖啡色M-8257",
+      "modelCode": "8257",
+      "category": "卷帘"
+    },
+    "8866": {
+      "productName": "8866",
+      "fullDescription": "全遮光浅灰M-8262",
+      "modelCode": "8262",
+      "category": "卷帘"
+    },
+    "8890": {
+      "productName": "8890",
+      "fullDescription": "半遮光粗网格浅灰M-4002             主图视频是密网格高遮光米黄M-4105",
+      "modelCode": "4002",
+      "category": "卷帘"
+    },
+    "BY3003": {
+      "productName": "BY3003",
+      "fullDescription": "6047-17抹茶绿",
+      "modelCode": "6047",
+      "category": "定制窗帘"
+    },
+    "BY3000": {
+      "productName": "BY3000",
+      "fullDescription": "幻影纱AS013-011",
+      "modelCode": "",
+      "category": "定制窗帘"
+    },
+    "BY3002": {
+      "productName": "BY3002",
+      "fullDescription": "0411-11奶油色",
+      "modelCode": "0411",
+      "category": "定制窗帘"
+    },
+    "BY3004": {
+      "productName": "BY3004",
+      "fullDescription": "ZC8119-1奶油白",
+      "modelCode": "8119",
+      "category": "定制窗帘"
+    },
+    "BY3005": {
+      "productName": "BY3005",
+      "fullDescription": "K611-2D薄雾玫瑰",
+      "modelCode": "",
+      "category": "定制窗帘"
+    }
+  }
+}

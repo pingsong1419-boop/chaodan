@@ -1,0 +1,19 @@
+{
+  "dryRun": true,
+  "headless": false,
+  "browserExecutable": "",
+  "confirmEveryStep": false,
+  "erpUrl": "https://www.erp321.com/",
+  "quoteUrl": "http://47.121.28.8:200/",
+  "erpUrlPattern": "erp321.com",
+  "quoteUrlPattern": "47.121.28.8:200",
+  "userDataDir": "./browser-profile",
+  "selectors": {
+    "erpSelectedRow": "tr[aria-selected='true'], tr.selected, .x-grid-row-selected, .ant-table-row-selected",
+    "quoteContact": "input[name='联系人']",
+    "quoteAmount": "input[name='主数字1']",
+    "quoteCompany": "select[name*='company' i], select[id*='company' i]",
+    "quoteAddDetail": "text=添加",
+    "quoteSave": "text=保存"
+  }
+}

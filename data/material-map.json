@@ -1,0 +1,5682 @@
+{
+  "version": 3,
+  "confirmedAt": "2026-09-29T13:46:16.621Z",
+  "materials": [
+    {
+      "aliases": ["6010"],
+      "productCategory": "百叶帘",
+      "searchText": "6010",
+      "variants": [
+        {
+          "finish": "亮光",
+          "color": "白色",
+          "modelCode": "2701",
+          "outputText": "6010 亮光白"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": ["8000"],
+      "productCategory": "卷帘",
+      "searchText": "8000",
+      "variants": [
+        { "finish": "防水", "color": "白色", "modelCode": "7261", "outputText": "8000 防水白" },
+        { "finish": "防水", "color": "淡蓝色", "modelCode": "7264", "outputText": "8000 防水淡蓝" },
+        { "finish": "防水", "color": "淡黄色", "modelCode": "7265", "outputText": "8000 防水淡黄" },
+        { "finish": "防水", "color": "浅灰色", "modelCode": "7268", "outputText": "8000 防水浅灰" },
+        { "finish": "哑光", "color": "黑色", "modelCode": "7270", "outputText": "8000 哑光黑" },
+        { "finish": "防水", "color": "素白", "modelCode": "7271", "outputText": "8000 素白" },
+        { "finish": "防水", "color": "浅绿色", "modelCode": "7276", "outputText": "8000 防水浅绿" },
+        { "finish": "防水", "color": "深灰色", "modelCode": "7278", "outputText": "8000 防水深灰" },
+        { "finish": "防水", "color": "灰色", "textMust": "仿亚麻", "modelCode": "9019", "outputText": "8000 防水仿亚麻灰" }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": ["6025"],
+      "productCategory": "百叶帘",
+      "searchText": "6025",
+      "variants": [
+        { "finish": "哑光", "color": "白色", "modelCode": "2911", "outputText": "6025 哑光白" }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0026"
+      ],
+      "productCategory": "",
+      "searchText": "仿古黑胡桃",
+      "candidateNames": [
+        "仿古黑胡桃"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0028"
+      ],
+      "productCategory": "",
+      "searchText": "仿古枫糖棕",
+      "candidateNames": [
+        "仿古枫糖棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0030"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝雅黑色",
+      "candidateNames": [
+        "拉丝雅黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0031"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝雅白色",
+      "candidateNames": [
+        "拉丝雅白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0032"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝苍木色",
+      "candidateNames": [
+        "拉丝苍木色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0033"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝深蓝色",
+      "candidateNames": [
+        "拉丝深蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0034"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝抹茶色",
+      "candidateNames": [
+        "拉丝抹茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0035"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝白蜡色",
+      "candidateNames": [
+        "拉丝白蜡色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0036"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝胡桃色",
+      "candidateNames": [
+        "拉丝胡桃色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0037"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝咖啡色",
+      "candidateNames": [
+        "拉丝咖啡色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0038"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝红橡色",
+      "candidateNames": [
+        "拉丝红橡色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0039"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝摩卡色",
+      "candidateNames": [
+        "拉丝摩卡色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0070"
+      ],
+      "productCategory": "",
+      "searchText": "爵士黑",
+      "candidateNames": [
+        "爵士黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0071"
+      ],
+      "productCategory": "",
+      "searchText": "典雅白",
+      "candidateNames": [
+        "典雅白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0072"
+      ],
+      "productCategory": "",
+      "searchText": "晨曦灰",
+      "candidateNames": [
+        "晨曦灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0073"
+      ],
+      "productCategory": "",
+      "searchText": "落栗色",
+      "candidateNames": [
+        "落栗色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0074"
+      ],
+      "productCategory": "",
+      "searchText": "松石绿",
+      "candidateNames": [
+        "松石绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0075"
+      ],
+      "productCategory": "",
+      "searchText": "原木纹",
+      "candidateNames": [
+        "原木纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0077"
+      ],
+      "productCategory": "",
+      "searchText": "胡桃色",
+      "candidateNames": [
+        "胡桃色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0078"
+      ],
+      "productCategory": "",
+      "searchText": "琥珀棕",
+      "candidateNames": [
+        "琥珀棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0079"
+      ],
+      "productCategory": "",
+      "searchText": "红木色",
+      "candidateNames": [
+        "红木色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0081"
+      ],
+      "productCategory": "",
+      "searchText": "典雅白",
+      "candidateNames": [
+        "典雅白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0083"
+      ],
+      "productCategory": "",
+      "searchText": "落栗色",
+      "candidateNames": [
+        "落栗色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0086"
+      ],
+      "productCategory": "",
+      "searchText": "黑胡桃",
+      "candidateNames": [
+        "黑胡桃"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0087"
+      ],
+      "productCategory": "",
+      "searchText": "中古咖",
+      "candidateNames": [
+        "中古咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0088"
+      ],
+      "productCategory": "",
+      "searchText": "琥珀棕",
+      "candidateNames": [
+        "琥珀棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0089"
+      ],
+      "productCategory": "",
+      "searchText": "红木色",
+      "candidateNames": [
+        "红木色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0175"
+      ],
+      "productCategory": "",
+      "searchText": "自然色",
+      "candidateNames": [
+        "自然色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0176"
+      ],
+      "productCategory": "",
+      "searchText": "黑胡桃",
+      "candidateNames": [
+        "黑胡桃"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0177"
+      ],
+      "productCategory": "",
+      "searchText": "中古咖",
+      "candidateNames": [
+        "中古咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0178"
+      ],
+      "productCategory": "",
+      "searchText": "暖樱桃",
+      "candidateNames": [
+        "暖樱桃"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "0187"
+      ],
+      "productCategory": "",
+      "searchText": "胡桃色",
+      "candidateNames": [
+        "胡桃色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2301"
+      ],
+      "productCategory": "",
+      "searchText": "哑光白色",
+      "candidateNames": [
+        "哑光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2302"
+      ],
+      "productCategory": "",
+      "searchText": "哑光灰色",
+      "candidateNames": [
+        "哑光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2303"
+      ],
+      "productCategory": "",
+      "searchText": "哑光蓝色",
+      "candidateNames": [
+        "哑光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2305"
+      ],
+      "productCategory": "",
+      "searchText": "哑光米黄色",
+      "candidateNames": [
+        "哑光米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2306"
+      ],
+      "productCategory": "",
+      "searchText": "哑光绿色",
+      "candidateNames": [
+        "哑光绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2307"
+      ],
+      "productCategory": "",
+      "searchText": "哑光卡其色",
+      "candidateNames": [
+        "哑光卡其色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2308"
+      ],
+      "productCategory": "",
+      "searchText": "哑光紫色",
+      "candidateNames": [
+        "哑光紫色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2310"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光黑色",
+      "candidateNames": [
+        "L型哑光黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2311"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光白色",
+      "candidateNames": [
+        "L型哑光白色",
+        "PVC奶白色L"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2312"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光灰色",
+      "candidateNames": [
+        "L型哑光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2315"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光米色",
+      "candidateNames": [
+        "L型哑光米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2316"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光果绿色",
+      "candidateNames": [
+        "L型哑光果绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2319"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光奶油色",
+      "candidateNames": [
+        "L型哑光奶油色",
+        "PVC奶油色L"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2323"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光海盐蓝",
+      "candidateNames": [
+        "L型哑光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2326"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光薄荷色",
+      "candidateNames": [
+        "L型哑光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2328"
+      ],
+      "productCategory": "",
+      "searchText": "L型哑光奶咖色",
+      "candidateNames": [
+        "L型哑光奶咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2331"
+      ],
+      "productCategory": "",
+      "searchText": "白色丝绸压纹",
+      "candidateNames": [
+        "白色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2332"
+      ],
+      "productCategory": "",
+      "searchText": "灰色丝绸压纹",
+      "candidateNames": [
+        "灰色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2333"
+      ],
+      "productCategory": "",
+      "searchText": "蓝色丝绸压纹",
+      "candidateNames": [
+        "蓝色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2335"
+      ],
+      "productCategory": "",
+      "searchText": "米黄色丝绸压纹",
+      "candidateNames": [
+        "米黄色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2337"
+      ],
+      "productCategory": "",
+      "searchText": "卡其色丝绸压纹",
+      "candidateNames": [
+        "卡其色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2338"
+      ],
+      "productCategory": "",
+      "searchText": "紫色丝绸压纹",
+      "candidateNames": [
+        "紫色丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2340"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝黑色",
+      "candidateNames": [
+        "L型拉丝黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2341"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝白色",
+      "candidateNames": [
+        "L型拉丝白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2342"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝灰色",
+      "candidateNames": [
+        "L型拉丝灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2343"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝蓝色",
+      "candidateNames": [
+        "L型拉丝蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2345"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝米黄色",
+      "candidateNames": [
+        "L型拉丝米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2349"
+      ],
+      "productCategory": "",
+      "searchText": "L型拉丝奶油色",
+      "candidateNames": [
+        "L型拉丝奶油色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2351"
+      ],
+      "productCategory": "",
+      "searchText": "3.5轻纱白丝绸压纹",
+      "candidateNames": [
+        "3.5轻纱白丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2352"
+      ],
+      "productCategory": "",
+      "searchText": "3.5银河灰丝绸压纹",
+      "candidateNames": [
+        "3.5银河灰丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2353"
+      ],
+      "productCategory": "",
+      "searchText": "3.5海青蓝丝绸压纹",
+      "candidateNames": [
+        "3.5海青蓝丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2355"
+      ],
+      "productCategory": "",
+      "searchText": "3.5栀子黄丝绸压纹",
+      "candidateNames": [
+        "3.5栀子黄丝绸压纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2391"
+      ],
+      "productCategory": "",
+      "searchText": "雪山白",
+      "candidateNames": [
+        "雪山白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2393"
+      ],
+      "productCategory": "",
+      "searchText": "法式拿铁",
+      "candidateNames": [
+        "法式拿铁"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2395"
+      ],
+      "productCategory": "",
+      "searchText": "香槟玫瑰",
+      "candidateNames": [
+        "香槟玫瑰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2396"
+      ],
+      "productCategory": "",
+      "searchText": "中古绿",
+      "candidateNames": [
+        "中古绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2398"
+      ],
+      "productCategory": "",
+      "searchText": "巧克力咖",
+      "candidateNames": [
+        "巧克力咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2399"
+      ],
+      "productCategory": "",
+      "searchText": "奶油色",
+      "candidateNames": [
+        "奶油色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2501"
+      ],
+      "productCategory": "",
+      "searchText": "亮光尊贵白",
+      "candidateNames": [
+        "亮光尊贵白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2502"
+      ],
+      "productCategory": "",
+      "searchText": "亮光银灰色",
+      "candidateNames": [
+        "亮光银灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2503"
+      ],
+      "productCategory": "",
+      "searchText": "亮光淡蓝色",
+      "candidateNames": [
+        "亮光淡蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2504"
+      ],
+      "productCategory": "",
+      "searchText": "亮光淡绿色",
+      "candidateNames": [
+        "亮光淡绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2507"
+      ],
+      "productCategory": "",
+      "searchText": "亮光梦幻粉",
+      "candidateNames": [
+        "亮光梦幻粉"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2509"
+      ],
+      "productCategory": "",
+      "searchText": "哑光棕褐色",
+      "candidateNames": [
+        "哑光棕褐色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2512"
+      ],
+      "productCategory": "",
+      "searchText": "亮光高贵紫",
+      "candidateNames": [
+        "亮光高贵紫"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2515"
+      ],
+      "productCategory": "",
+      "searchText": "亮光阳光黄色",
+      "candidateNames": [
+        "亮光阳光黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2518"
+      ],
+      "productCategory": "",
+      "searchText": "哑光尊贵银",
+      "candidateNames": [
+        "哑光尊贵银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2523"
+      ],
+      "productCategory": "",
+      "searchText": "闪光银色",
+      "candidateNames": [
+        "闪光银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2527"
+      ],
+      "productCategory": "",
+      "searchText": "闪光香槟色",
+      "candidateNames": [
+        "闪光香槟色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2529"
+      ],
+      "productCategory": "",
+      "searchText": "闪光蓝色",
+      "candidateNames": [
+        "闪光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2562"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝银灰",
+      "candidateNames": [
+        "拉丝银灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2563"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝蓝色",
+      "candidateNames": [
+        "拉丝蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2565"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝香槟色",
+      "candidateNames": [
+        "拉丝香槟色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2566"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝紫罗兰",
+      "candidateNames": [
+        "拉丝紫罗兰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2567"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝粉色",
+      "candidateNames": [
+        "拉丝粉色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2601"
+      ],
+      "productCategory": "",
+      "searchText": "哑光白色",
+      "candidateNames": [
+        "哑光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2602"
+      ],
+      "productCategory": "",
+      "searchText": "哑光云石灰",
+      "candidateNames": [
+        "哑光云石灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2603"
+      ],
+      "productCategory": "",
+      "searchText": "哑光优雅蓝",
+      "candidateNames": [
+        "哑光优雅蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2605"
+      ],
+      "productCategory": "",
+      "searchText": "哑光阳光黄",
+      "candidateNames": [
+        "哑光阳光黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2606"
+      ],
+      "productCategory": "",
+      "searchText": "哑光清湖绿",
+      "candidateNames": [
+        "哑光清湖绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2607"
+      ],
+      "productCategory": "",
+      "searchText": "哑光梦幻粉",
+      "candidateNames": [
+        "哑光梦幻粉"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2610"
+      ],
+      "productCategory": "",
+      "searchText": "哑光极光黑",
+      "candidateNames": [
+        "哑光极光黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2612"
+      ],
+      "productCategory": "",
+      "searchText": "哑光高贵紫",
+      "candidateNames": [
+        "哑光高贵紫"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2701"
+      ],
+      "productCategory": "",
+      "searchText": "亮光白色",
+      "candidateNames": [
+        "亮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2702"
+      ],
+      "productCategory": "",
+      "searchText": "亮光银色",
+      "candidateNames": [
+        "亮光银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2703"
+      ],
+      "productCategory": "",
+      "searchText": "亮光天蓝",
+      "candidateNames": [
+        "亮光天蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2704"
+      ],
+      "productCategory": "",
+      "searchText": "亮光薄荷色",
+      "candidateNames": [
+        "亮光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2705"
+      ],
+      "productCategory": "",
+      "searchText": "亮光米白",
+      "candidateNames": [
+        "亮光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2710"
+      ],
+      "productCategory": "",
+      "searchText": "浩瀚黑",
+      "candidateNames": [
+        "浩瀚黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2711"
+      ],
+      "productCategory": "",
+      "searchText": "哑光白色",
+      "candidateNames": [
+        "哑光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2713"
+      ],
+      "productCategory": "",
+      "searchText": "哑光蓝色",
+      "candidateNames": [
+        "哑光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2715"
+      ],
+      "productCategory": "",
+      "searchText": "哑光浅驼色",
+      "candidateNames": [
+        "哑光浅驼色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2716"
+      ],
+      "productCategory": "",
+      "searchText": "哑光果绿色",
+      "candidateNames": [
+        "哑光果绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2718"
+      ],
+      "productCategory": "",
+      "searchText": "哑光灰色",
+      "candidateNames": [
+        "哑光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2719"
+      ],
+      "productCategory": "",
+      "searchText": "哑光奶油色",
+      "candidateNames": [
+        "哑光奶油色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2722"
+      ],
+      "productCategory": "",
+      "searchText": "哑光金属银",
+      "candidateNames": [
+        "哑光金属银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2723"
+      ],
+      "productCategory": "",
+      "searchText": "哑光海盐蓝",
+      "candidateNames": [
+        "哑光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2726"
+      ],
+      "productCategory": "",
+      "searchText": "哑光薄荷色",
+      "candidateNames": [
+        "哑光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2727"
+      ],
+      "productCategory": "",
+      "searchText": "亮光香槟金",
+      "candidateNames": [
+        "亮光香槟金"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2728"
+      ],
+      "productCategory": "",
+      "searchText": "哑光奶咖色",
+      "candidateNames": [
+        "哑光奶咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2731"
+      ],
+      "productCategory": "",
+      "searchText": "磨砂珍珠白",
+      "candidateNames": [
+        "磨砂珍珠白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2732"
+      ],
+      "productCategory": "",
+      "searchText": "磨砂银色",
+      "candidateNames": [
+        "磨砂银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2733"
+      ],
+      "productCategory": "",
+      "searchText": "亮光海盐蓝",
+      "candidateNames": [
+        "亮光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2741"
+      ],
+      "productCategory": "",
+      "searchText": "珠光白色",
+      "candidateNames": [
+        "珠光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2745"
+      ],
+      "productCategory": "",
+      "searchText": "珠光米白",
+      "candidateNames": [
+        "珠光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2746"
+      ],
+      "productCategory": "",
+      "searchText": "珠光果绿色",
+      "candidateNames": [
+        "珠光果绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2753"
+      ],
+      "productCategory": "",
+      "searchText": "C型克莱因蓝",
+      "candidateNames": [
+        "C型克莱因蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2760"
+      ],
+      "productCategory": "",
+      "searchText": "磨砂拉丝黑",
+      "candidateNames": [
+        "磨砂拉丝黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2761"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝白色",
+      "candidateNames": [
+        "拉丝白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2762"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝银色",
+      "candidateNames": [
+        "拉丝银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2763"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝蓝色",
+      "candidateNames": [
+        "拉丝蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2765"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝香槟色",
+      "candidateNames": [
+        "拉丝香槟色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2768"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝轻奢灰",
+      "candidateNames": [
+        "拉丝轻奢灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2769"
+      ],
+      "productCategory": "",
+      "searchText": "拉丝奶油白",
+      "candidateNames": [
+        "拉丝奶油白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2771"
+      ],
+      "productCategory": "",
+      "searchText": "奶白色铝合金L",
+      "candidateNames": [
+        "奶白色铝合金L"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2801"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光白色",
+      "candidateNames": [
+        "S片亮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2802"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光银色",
+      "candidateNames": [
+        "S片亮光银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2803"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光天蓝",
+      "candidateNames": [
+        "S片亮光天蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2804"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光淡绿",
+      "candidateNames": [
+        "S片亮光淡绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2805"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光米白",
+      "candidateNames": [
+        "S片亮光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2810"
+      ],
+      "productCategory": "",
+      "searchText": "S片浩瀚黑",
+      "candidateNames": [
+        "S片浩瀚黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2811"
+      ],
+      "productCategory": "",
+      "searchText": "S片哑光白色",
+      "candidateNames": [
+        "S片哑光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2813"
+      ],
+      "productCategory": "",
+      "searchText": "S片哑光蓝色",
+      "candidateNames": [
+        "S片哑光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2815"
+      ],
+      "productCategory": "",
+      "searchText": "S片哑光米黄",
+      "candidateNames": [
+        "S片哑光米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2818"
+      ],
+      "productCategory": "",
+      "searchText": "S哑光灰色",
+      "candidateNames": [
+        "S哑光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2819"
+      ],
+      "productCategory": "",
+      "searchText": "S哑光奶油色",
+      "candidateNames": [
+        "S哑光奶油色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2822"
+      ],
+      "productCategory": "",
+      "searchText": "S片哑光金属银",
+      "candidateNames": [
+        "S片哑光金属银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2827"
+      ],
+      "productCategory": "",
+      "searchText": "S片亮光香槟金",
+      "candidateNames": [
+        "S片亮光香槟金"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2831"
+      ],
+      "productCategory": "",
+      "searchText": "S片磨砂白色",
+      "candidateNames": [
+        "S片磨砂白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2832"
+      ],
+      "productCategory": "",
+      "searchText": "S片磨砂银色",
+      "candidateNames": [
+        "S片磨砂银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2841"
+      ],
+      "productCategory": "",
+      "searchText": "S片珠光白色",
+      "candidateNames": [
+        "S片珠光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2845"
+      ],
+      "productCategory": "",
+      "searchText": "S片珠光米白",
+      "candidateNames": [
+        "S片珠光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2846"
+      ],
+      "productCategory": "",
+      "searchText": "S片珠光绿色",
+      "candidateNames": [
+        "S片珠光绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2860"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝磨砂黑",
+      "candidateNames": [
+        "S片拉丝磨砂黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2861"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝白色",
+      "candidateNames": [
+        "S片拉丝白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2862"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝银色",
+      "candidateNames": [
+        "S片拉丝银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2863"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝蓝色",
+      "candidateNames": [
+        "S片拉丝蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2865"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝香槟色",
+      "candidateNames": [
+        "S片拉丝香槟色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2868"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝轻奢灰",
+      "candidateNames": [
+        "S片拉丝轻奢灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2869"
+      ],
+      "productCategory": "",
+      "searchText": "S片拉丝奶油白",
+      "candidateNames": [
+        "S片拉丝奶油白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2901"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光白色",
+      "candidateNames": [
+        "L片亮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2902"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光银色",
+      "candidateNames": [
+        "L片亮光银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2903"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光天蓝",
+      "candidateNames": [
+        "L片亮光天蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2904"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光薄荷色",
+      "candidateNames": [
+        "L片亮光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2905"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光米白",
+      "candidateNames": [
+        "L片亮光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2910"
+      ],
+      "productCategory": "",
+      "searchText": "L片浩瀚黑",
+      "candidateNames": [
+        "L片浩瀚黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2911"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光白色",
+      "candidateNames": [
+        "L片哑光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2913"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光蓝色",
+      "candidateNames": [
+        "L片哑光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2915"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光浅驼色",
+      "candidateNames": [
+        "L片哑光浅驼色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2916"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光果绿色",
+      "candidateNames": [
+        "L片哑光果绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2918"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光灰色",
+      "candidateNames": [
+        "L片哑光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2919"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光奶油色",
+      "candidateNames": [
+        "L片哑光奶油色",
+        "奶油色铝合金L"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2922"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光金属银",
+      "candidateNames": [
+        "L片哑光金属银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2923"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光海盐蓝",
+      "candidateNames": [
+        "L片哑光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2926"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光薄荷色",
+      "candidateNames": [
+        "L片哑光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2927"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光香槟金",
+      "candidateNames": [
+        "L片亮光香槟金"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2928"
+      ],
+      "productCategory": "",
+      "searchText": "L片哑光奶咖色",
+      "candidateNames": [
+        "L片哑光奶咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2931"
+      ],
+      "productCategory": "",
+      "searchText": "L片磨砂珍珠白",
+      "candidateNames": [
+        "L片磨砂珍珠白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2932"
+      ],
+      "productCategory": "",
+      "searchText": "L片磨砂银色",
+      "candidateNames": [
+        "L片磨砂银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2933"
+      ],
+      "productCategory": "",
+      "searchText": "L片亮光海盐蓝",
+      "candidateNames": [
+        "L片亮光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2941"
+      ],
+      "productCategory": "",
+      "searchText": "L片珠光白色",
+      "candidateNames": [
+        "L片珠光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2945"
+      ],
+      "productCategory": "",
+      "searchText": "L片珠光米白",
+      "candidateNames": [
+        "L片珠光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2946"
+      ],
+      "productCategory": "",
+      "searchText": "L片珠光果绿色",
+      "candidateNames": [
+        "L片珠光果绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2953"
+      ],
+      "productCategory": "",
+      "searchText": "L型克莱因蓝",
+      "candidateNames": [
+        "L型克莱因蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2960"
+      ],
+      "productCategory": "",
+      "searchText": "L片磨砂拉丝黑",
+      "candidateNames": [
+        "L片磨砂拉丝黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2961"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝白色",
+      "candidateNames": [
+        "L片拉丝白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2962"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝银色",
+      "candidateNames": [
+        "L片拉丝银色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2963"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝蓝色",
+      "candidateNames": [
+        "L片拉丝蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2965"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝香槟色",
+      "candidateNames": [
+        "L片拉丝香槟色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2968"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝轻奢灰",
+      "candidateNames": [
+        "L片拉丝轻奢灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2969"
+      ],
+      "productCategory": "",
+      "searchText": "L片拉丝奶油白",
+      "candidateNames": [
+        "L片拉丝奶油白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2982"
+      ],
+      "productCategory": "",
+      "searchText": "木纹雾桦纹",
+      "candidateNames": [
+        "木纹雾桦纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2989"
+      ],
+      "productCategory": "",
+      "searchText": "木纹中古咖",
+      "candidateNames": [
+        "木纹中古咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2991"
+      ],
+      "productCategory": "",
+      "searchText": "木纹柚木纹",
+      "candidateNames": [
+        "木纹柚木纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2993"
+      ],
+      "productCategory": "",
+      "searchText": "木纹胡桃色",
+      "candidateNames": [
+        "木纹胡桃色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2995"
+      ],
+      "productCategory": "",
+      "searchText": "木纹樱桃纹",
+      "candidateNames": [
+        "木纹樱桃纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "2999"
+      ],
+      "productCategory": "",
+      "searchText": "木纹梨树纹",
+      "candidateNames": [
+        "木纹梨树纹"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3090"
+      ],
+      "productCategory": "",
+      "searchText": "3cmL片哑光深空黑",
+      "candidateNames": [
+        "3cmL片哑光深空黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3091"
+      ],
+      "productCategory": "",
+      "searchText": "3cmL片哑光贝母白",
+      "candidateNames": [
+        "3cmL片哑光贝母白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3092"
+      ],
+      "productCategory": "",
+      "searchText": "3cmL片哑光钛灰银",
+      "candidateNames": [
+        "3cmL片哑光钛灰银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3093"
+      ],
+      "productCategory": "",
+      "searchText": "3cmL片哑光星芒蓝",
+      "candidateNames": [
+        "3cmL片哑光星芒蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3095"
+      ],
+      "productCategory": "",
+      "searchText": "3cmL片哑光淡奶黄",
+      "candidateNames": [
+        "3cmL片哑光淡奶黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3501"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽白亮光",
+      "candidateNames": [
+        "3.5加宽白亮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3504"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽蓝亮光",
+      "candidateNames": [
+        "3.5加宽蓝亮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3505"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽米白亮光",
+      "candidateNames": [
+        "3.5加宽米白亮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3522"
+      ],
+      "productCategory": "",
+      "searchText": "3.5闪光银",
+      "candidateNames": [
+        "3.5闪光银"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3528"
+      ],
+      "productCategory": "",
+      "searchText": "3.5闪光金",
+      "candidateNames": [
+        "3.5闪光金"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3530"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽黑色哑光",
+      "candidateNames": [
+        "3.5加宽黑色哑光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3531"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽白色哑光",
+      "candidateNames": [
+        "3.5加宽白色哑光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3532"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽浅灰哑光",
+      "candidateNames": [
+        "3.5加宽浅灰哑光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3535"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽米黄哑光",
+      "candidateNames": [
+        "3.5加宽米黄哑光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3551"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽白色珠光",
+      "candidateNames": [
+        "3.5加宽白色珠光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3552"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽灰色珠光",
+      "candidateNames": [
+        "3.5加宽灰色珠光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "3562"
+      ],
+      "productCategory": "",
+      "searchText": "3.5加宽灰色拉丝",
+      "candidateNames": [
+        "3.5加宽灰色拉丝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4001"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光5％开孔白色",
+      "candidateNames": [
+        "半遮光5％开孔白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4002"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光5％开孔浅灰",
+      "candidateNames": [
+        "半遮光5％开孔浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4005"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光5％开孔米黄",
+      "candidateNames": [
+        "半遮光5％开孔米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4010"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光5％开孔深灰",
+      "candidateNames": [
+        "半遮光5％开孔深灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4021"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光3％开孔白色",
+      "candidateNames": [
+        "半遮光3％开孔白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4022"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光3％开孔浅灰",
+      "candidateNames": [
+        "半遮光3％开孔浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4025"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光3％开孔米肉",
+      "candidateNames": [
+        "半遮光3％开孔米肉"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4037"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光3％开孔深灰",
+      "candidateNames": [
+        "半遮光3％开孔深灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4081"
+      ],
+      "productCategory": "",
+      "searchText": "六防全遮月光白",
+      "candidateNames": [
+        "六防全遮月光白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4082"
+      ],
+      "productCategory": "",
+      "searchText": "六防全遮海豚灰",
+      "candidateNames": [
+        "六防全遮海豚灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4085"
+      ],
+      "productCategory": "",
+      "searchText": "六防全遮奶油米",
+      "candidateNames": [
+        "六防全遮奶油米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4102"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光1％开孔浅灰",
+      "candidateNames": [
+        "高遮光1％开孔浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4105"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光1％开孔米黄",
+      "candidateNames": [
+        "高遮光1％开孔米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4192"
+      ],
+      "productCategory": "",
+      "searchText": "全遮0％开孔率商务白",
+      "candidateNames": [
+        "全遮0％开孔率商务白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4195"
+      ],
+      "productCategory": "",
+      "searchText": "全遮0％开孔率商务米",
+      "candidateNames": [
+        "全遮0％开孔率商务米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "4198"
+      ],
+      "productCategory": "",
+      "searchText": "全遮0％开孔率商务灰",
+      "candidateNames": [
+        "全遮0％开孔率商务灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5010"
+      ],
+      "productCategory": "",
+      "searchText": "哑光黑",
+      "candidateNames": [
+        "哑光黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5011"
+      ],
+      "productCategory": "",
+      "searchText": "珍珠白",
+      "candidateNames": [
+        "珍珠白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5012"
+      ],
+      "productCategory": "",
+      "searchText": "氟碳灰",
+      "candidateNames": [
+        "氟碳灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5015"
+      ],
+      "productCategory": "",
+      "searchText": "奶杏色",
+      "candidateNames": [
+        "奶杏色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5081"
+      ],
+      "productCategory": "",
+      "searchText": "木纹淡雅灰",
+      "candidateNames": [
+        "木纹淡雅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5089"
+      ],
+      "productCategory": "",
+      "searchText": "木纹胡桃色",
+      "candidateNames": [
+        "木纹胡桃色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5501"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm经典素雅白",
+      "candidateNames": [
+        "12.5cm经典素雅白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5511"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm经典白色",
+      "candidateNames": [
+        "12.5cm经典白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5512"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm经典灰色",
+      "candidateNames": [
+        "12.5cm经典灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5515"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm经典米黄",
+      "candidateNames": [
+        "12.5cm经典米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5518"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm经典浅咖",
+      "candidateNames": [
+        "12.5cm经典浅咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5521"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm竖纹白色",
+      "candidateNames": [
+        "12.5cm竖纹白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5525"
+      ],
+      "productCategory": "",
+      "searchText": "12.5cm竖纹米黄",
+      "candidateNames": [
+        "12.5cm竖纹米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5581"
+      ],
+      "productCategory": "",
+      "searchText": "10cm经典白色",
+      "candidateNames": [
+        "10cm经典白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5585"
+      ],
+      "productCategory": "",
+      "searchText": "10cm经典米黄",
+      "candidateNames": [
+        "10cm经典米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5706"
+      ],
+      "productCategory": "",
+      "searchText": "阳光面料半遮光白色",
+      "candidateNames": [
+        "阳光面料半遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5708"
+      ],
+      "productCategory": "",
+      "searchText": "阳光面料半遮光米色",
+      "candidateNames": [
+        "阳光面料半遮光米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5709"
+      ],
+      "productCategory": "",
+      "searchText": "阳光面料半遮光灰色",
+      "candidateNames": [
+        "阳光面料半遮光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5735"
+      ],
+      "productCategory": "",
+      "searchText": "阳光面料半遮光仿麻白",
+      "candidateNames": [
+        "阳光面料半遮光仿麻白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5871"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光竖条纹白色",
+      "candidateNames": [
+        "半遮光竖条纹白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5872"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光竖条纹浅灰色",
+      "candidateNames": [
+        "半遮光竖条纹浅灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5875"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光竖条纹米黄",
+      "candidateNames": [
+        "半遮光竖条纹米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5881"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光仿亚麻白色",
+      "candidateNames": [
+        "半遮光仿亚麻白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5882"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光仿亚麻浅灰色",
+      "candidateNames": [
+        "半遮光仿亚麻浅灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5885"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光仿亚麻米白色",
+      "candidateNames": [
+        "半遮光仿亚麻米白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5891"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光防水白色",
+      "candidateNames": [
+        "全遮光防水白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5892"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光防水灰色",
+      "candidateNames": [
+        "全遮光防水灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5894"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光防水蓝色",
+      "candidateNames": [
+        "全遮光防水蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "5895"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光防水浅黄",
+      "candidateNames": [
+        "全遮光防水浅黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6035"
+      ],
+      "productCategory": "",
+      "searchText": "仿古枫糖棕",
+      "candidateNames": [
+        "仿古枫糖棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6045"
+      ],
+      "productCategory": "",
+      "searchText": "免钉/哑光 奶油色",
+      "candidateNames": [
+        "免钉/哑光 奶油色"
+      ],
+      "status": "confirmed",
+      "attributes": {
+        "installation": "免钉",
+        "finish": "哑光",
+        "color": "奶油色"
+      }
+    },
+    {
+      "aliases": [
+        "6601"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光白色",
+      "candidateNames": [
+        "半遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6602"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光浅灰",
+      "candidateNames": [
+        "半遮光浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6603"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光蓝色",
+      "candidateNames": [
+        "半遮光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6605"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光米黄",
+      "candidateNames": [
+        "半遮光米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6608"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光咖色",
+      "candidateNames": [
+        "半遮光咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6612"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光深灰",
+      "candidateNames": [
+        "半遮光深灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6621"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光防水白色",
+      "candidateNames": [
+        "半遮光防水白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6622"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光防水灰色",
+      "candidateNames": [
+        "半遮光防水灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6695"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光仿麻白",
+      "candidateNames": [
+        "半遮光仿麻白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "6698"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光仿麻灰",
+      "candidateNames": [
+        "半遮光仿麻灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7261"
+      ],
+      "productCategory": "",
+      "searchText": "防水白色",
+      "candidateNames": [
+        "防水白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7264"
+      ],
+      "productCategory": "",
+      "searchText": "防水淡蓝色",
+      "candidateNames": [
+        "防水淡蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7265"
+      ],
+      "productCategory": "",
+      "searchText": "防水淡黄色",
+      "candidateNames": [
+        "防水淡黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7268"
+      ],
+      "productCategory": "",
+      "searchText": "防水浅灰色",
+      "candidateNames": [
+        "防水浅灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7270"
+      ],
+      "productCategory": "",
+      "searchText": "防水哑光黑",
+      "candidateNames": [
+        "防水哑光黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7271"
+      ],
+      "productCategory": "",
+      "searchText": "防水素白",
+      "candidateNames": [
+        "防水素白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7276"
+      ],
+      "productCategory": "",
+      "searchText": "防水浅绿色",
+      "candidateNames": [
+        "防水浅绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "7278"
+      ],
+      "productCategory": "",
+      "searchText": "防水深灰色",
+      "candidateNames": [
+        "防水深灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8003"
+      ],
+      "productCategory": "",
+      "searchText": "棕色",
+      "candidateNames": [
+        "棕色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8004"
+      ],
+      "productCategory": "",
+      "searchText": "深灰色",
+      "candidateNames": [
+        "深灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8005"
+      ],
+      "productCategory": "",
+      "searchText": "浅棕色",
+      "candidateNames": [
+        "浅棕色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8024"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色深红",
+      "candidateNames": [
+        "高遮光纯色深红"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8025"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色灰色",
+      "candidateNames": [
+        "高遮光纯色灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8243"
+      ],
+      "productCategory": "",
+      "searchText": "亚麻蓝色",
+      "candidateNames": [
+        "亚麻蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8250"
+      ],
+      "productCategory": "",
+      "searchText": "亚麻褐色",
+      "candidateNames": [
+        "亚麻褐色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8252"
+      ],
+      "productCategory": "",
+      "searchText": "亚麻灰色",
+      "candidateNames": [
+        "亚麻灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8255"
+      ],
+      "productCategory": "",
+      "searchText": "亚麻肉色",
+      "candidateNames": [
+        "亚麻肉色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8257"
+      ],
+      "productCategory": "",
+      "searchText": "亚麻咖啡色",
+      "candidateNames": [
+        "亚麻咖啡色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8261"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光白色",
+      "candidateNames": [
+        "全遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8262"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光浅灰",
+      "candidateNames": [
+        "全遮光浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8263"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光蓝色",
+      "candidateNames": [
+        "全遮光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8265"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光米黄",
+      "candidateNames": [
+        "全遮光米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8272"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光深灰",
+      "candidateNames": [
+        "全遮光深灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8281"
+      ],
+      "productCategory": "",
+      "searchText": "细麻米白色",
+      "candidateNames": [
+        "细麻米白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8284"
+      ],
+      "productCategory": "",
+      "searchText": "细麻浅蓝色",
+      "candidateNames": [
+        "细麻浅蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8285"
+      ],
+      "productCategory": "",
+      "searchText": "细麻米黄色",
+      "candidateNames": [
+        "细麻米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8288"
+      ],
+      "productCategory": "",
+      "searchText": "细麻灰色",
+      "candidateNames": [
+        "细麻灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8290"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻烟墨灰",
+      "candidateNames": [
+        "全遮光细麻烟墨灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8292"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻灰雾蓝",
+      "candidateNames": [
+        "全遮光细麻灰雾蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8295"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻淡奶米",
+      "candidateNames": [
+        "全遮光细麻淡奶米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8297"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻奶茶咖",
+      "candidateNames": [
+        "全遮光细麻奶茶咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8298"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻高级灰",
+      "candidateNames": [
+        "全遮光细麻高级灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8301"
+      ],
+      "productCategory": "",
+      "searchText": "竹节纹全遮燕麦白",
+      "candidateNames": [
+        "竹节纹全遮燕麦白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8302"
+      ],
+      "productCategory": "",
+      "searchText": "竹节纹全遮西装灰",
+      "candidateNames": [
+        "竹节纹全遮西装灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8303"
+      ],
+      "productCategory": "",
+      "searchText": "竹节纹全遮牛仔蓝",
+      "candidateNames": [
+        "竹节纹全遮牛仔蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "8308"
+      ],
+      "productCategory": "",
+      "searchText": "竹节纹全遮伯爵棕",
+      "candidateNames": [
+        "竹节纹全遮伯爵棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9001"
+      ],
+      "productCategory": "",
+      "searchText": "防水白色",
+      "candidateNames": [
+        "防水白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9002"
+      ],
+      "productCategory": "",
+      "searchText": "防水灰色",
+      "candidateNames": [
+        "防水灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9003"
+      ],
+      "productCategory": "",
+      "searchText": "防水淡蓝",
+      "candidateNames": [
+        "防水淡蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9005"
+      ],
+      "productCategory": "",
+      "searchText": "防水米黄",
+      "candidateNames": [
+        "防水米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9015"
+      ],
+      "productCategory": "",
+      "searchText": "防水仿亚麻白色",
+      "candidateNames": [
+        "防水仿亚麻白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9018"
+      ],
+      "productCategory": "",
+      "searchText": "防水仿亚麻黄色",
+      "candidateNames": [
+        "防水仿亚麻黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9019"
+      ],
+      "productCategory": "",
+      "searchText": "防水仿亚麻灰色",
+      "candidateNames": [
+        "防水仿亚麻灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9021"
+      ],
+      "productCategory": "",
+      "searchText": "高精密小恐龙",
+      "candidateNames": [
+        "高精密小恐龙"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9024"
+      ],
+      "productCategory": "",
+      "searchText": "绿野仙踪",
+      "candidateNames": [
+        "绿野仙踪"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9111"
+      ],
+      "productCategory": "",
+      "searchText": "仿粗麻嫩杏白",
+      "candidateNames": [
+        "仿粗麻嫩杏白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9112"
+      ],
+      "productCategory": "",
+      "searchText": "仿粗麻星河灰",
+      "candidateNames": [
+        "仿粗麻星河灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9115"
+      ],
+      "productCategory": "",
+      "searchText": "仿粗麻茉莉黄",
+      "candidateNames": [
+        "仿粗麻茉莉黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9118"
+      ],
+      "productCategory": "",
+      "searchText": "仿粗麻复古咖",
+      "candidateNames": [
+        "仿粗麻复古咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9119"
+      ],
+      "productCategory": "",
+      "searchText": "仿粗麻苍木棕",
+      "candidateNames": [
+        "仿粗麻苍木棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9161"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光月光白",
+      "candidateNames": [
+        "高遮光月光白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9162"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光雾屿灰",
+      "candidateNames": [
+        "高遮光雾屿灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9168"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光橡木棕",
+      "candidateNames": [
+        "高遮光橡木棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9171"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光云上舞白",
+      "candidateNames": [
+        "半遮光云上舞白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9172"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光深海鸥灰",
+      "candidateNames": [
+        "半遮光深海鸥灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9175"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光甜梨沙黄",
+      "candidateNames": [
+        "半遮光甜梨沙黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9301"
+      ],
+      "productCategory": "",
+      "searchText": "防亚麻浅灰",
+      "candidateNames": [
+        "防亚麻浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9304"
+      ],
+      "productCategory": "",
+      "searchText": "防亚麻绿色",
+      "candidateNames": [
+        "防亚麻绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9306"
+      ],
+      "productCategory": "",
+      "searchText": "防亚麻肉色",
+      "candidateNames": [
+        "防亚麻肉色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9308"
+      ],
+      "productCategory": "",
+      "searchText": "防亚麻棕色",
+      "candidateNames": [
+        "防亚麻棕色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9600"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密雅黑",
+      "candidateNames": [
+        "Pro高精密雅黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9601"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密月光白",
+      "candidateNames": [
+        "Pro高精密月光白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9602"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密深空灰",
+      "candidateNames": [
+        "Pro高精密深空灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9605"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密淡奶黄",
+      "candidateNames": [
+        "Pro高精密淡奶黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9607"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密奶茶色",
+      "candidateNames": [
+        "Pro高精密奶茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9621"
+      ],
+      "productCategory": "",
+      "searchText": "Pro高精密仿麻雅白",
+      "candidateNames": [
+        "Pro高精密仿麻雅白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9662"
+      ],
+      "productCategory": "",
+      "searchText": "银灰色",
+      "candidateNames": [
+        "银灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9663"
+      ],
+      "productCategory": "",
+      "searchText": "天蓝色",
+      "candidateNames": [
+        "天蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9665"
+      ],
+      "productCategory": "",
+      "searchText": "米色",
+      "candidateNames": [
+        "米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9667"
+      ],
+      "productCategory": "",
+      "searchText": "浅棕色",
+      "candidateNames": [
+        "浅棕色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9668"
+      ],
+      "productCategory": "",
+      "searchText": "深灰色",
+      "candidateNames": [
+        "深灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9669"
+      ],
+      "productCategory": "",
+      "searchText": "棕色",
+      "candidateNames": [
+        "棕色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9681"
+      ],
+      "productCategory": "",
+      "searchText": "浅米色",
+      "candidateNames": [
+        "浅米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9682"
+      ],
+      "productCategory": "",
+      "searchText": "灰色",
+      "candidateNames": [
+        "灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9683"
+      ],
+      "productCategory": "",
+      "searchText": "淡蓝",
+      "candidateNames": [
+        "淡蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9685"
+      ],
+      "productCategory": "",
+      "searchText": "米色",
+      "candidateNames": [
+        "米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9686"
+      ],
+      "productCategory": "",
+      "searchText": "绿色",
+      "candidateNames": [
+        "绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9687"
+      ],
+      "productCategory": "",
+      "searchText": "浅棕",
+      "candidateNames": [
+        "浅棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9691"
+      ],
+      "productCategory": "",
+      "searchText": "水墨丹青",
+      "candidateNames": [
+        "水墨丹青"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9761"
+      ],
+      "productCategory": "",
+      "searchText": "黑纱仿亚麻银白色",
+      "candidateNames": [
+        "黑纱仿亚麻银白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9762"
+      ],
+      "productCategory": "",
+      "searchText": "黑纱仿亚麻灰色",
+      "candidateNames": [
+        "黑纱仿亚麻灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9765"
+      ],
+      "productCategory": "",
+      "searchText": "黑纱仿亚麻米黄色",
+      "candidateNames": [
+        "黑纱仿亚麻米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9768"
+      ],
+      "productCategory": "",
+      "searchText": "黑纱仿亚麻咖色",
+      "candidateNames": [
+        "黑纱仿亚麻咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9771"
+      ],
+      "productCategory": "",
+      "searchText": "珍珠白",
+      "candidateNames": [
+        "珍珠白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9772"
+      ],
+      "productCategory": "",
+      "searchText": "银灰色",
+      "candidateNames": [
+        "银灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9775"
+      ],
+      "productCategory": "",
+      "searchText": "浅米色",
+      "candidateNames": [
+        "浅米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9778"
+      ],
+      "productCategory": "",
+      "searchText": "可可棕",
+      "candidateNames": [
+        "可可棕"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9860"
+      ],
+      "productCategory": "",
+      "searchText": "Pro Max全遮光暗夜黑",
+      "candidateNames": [
+        "Pro Max全遮光暗夜黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9861"
+      ],
+      "productCategory": "",
+      "searchText": "Pro Max全遮光白色",
+      "candidateNames": [
+        "Pro Max全遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9862"
+      ],
+      "productCategory": "",
+      "searchText": "Pro Max全遮光灰色",
+      "candidateNames": [
+        "Pro Max全遮光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9865"
+      ],
+      "productCategory": "",
+      "searchText": "Pro Max全遮光奶油色",
+      "candidateNames": [
+        "Pro Max全遮光奶油色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9881"
+      ],
+      "productCategory": "",
+      "searchText": "抑菌全遮光银白色",
+      "candidateNames": [
+        "抑菌全遮光银白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9882"
+      ],
+      "productCategory": "",
+      "searchText": "抑菌全遮光浅灰色",
+      "candidateNames": [
+        "抑菌全遮光浅灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "9885"
+      ],
+      "productCategory": "",
+      "searchText": "抑菌全遮光浅黄色",
+      "candidateNames": [
+        "抑菌全遮光浅黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12000"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光白色",
+      "candidateNames": [
+        "半遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12003"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光蓝色",
+      "candidateNames": [
+        "半遮光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12005"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光阳光奶黄",
+      "candidateNames": [
+        "半遮光阳光奶黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12006"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光浅绿",
+      "candidateNames": [
+        "半遮光浅绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12007"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光浅咖",
+      "candidateNames": [
+        "半遮光浅咖"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12008"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光奶茶色",
+      "candidateNames": [
+        "半遮光奶茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12009"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光橙漫落日",
+      "candidateNames": [
+        "半遮光橙漫落日"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12010"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光黑色",
+      "candidateNames": [
+        "全遮光黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12011"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光白色",
+      "candidateNames": [
+        "全遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12012"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光蓝色",
+      "candidateNames": [
+        "全遮光蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12013"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光黄色",
+      "candidateNames": [
+        "全遮光黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12015"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光绿色",
+      "candidateNames": [
+        "全遮光绿色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12017"
+      ],
+      "productCategory": "",
+      "searchText": "全遮浅咖色",
+      "candidateNames": [
+        "全遮浅咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12018"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光浅灰",
+      "candidateNames": [
+        "全遮光浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12019"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光米白",
+      "candidateNames": [
+        "全遮光米白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12022"
+      ],
+      "productCategory": "",
+      "searchText": "全遮曼午灰",
+      "candidateNames": [
+        "全遮曼午灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12023"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光海盐蓝",
+      "candidateNames": [
+        "全遮光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12026"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光时光绿",
+      "candidateNames": [
+        "全遮光时光绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12027"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光波普粉",
+      "candidateNames": [
+        "全遮光波普粉"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12028"
+      ],
+      "productCategory": "",
+      "searchText": "全遮奶茶色",
+      "candidateNames": [
+        "全遮奶茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12029"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光月瓷白",
+      "candidateNames": [
+        "全遮光月瓷白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12031"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光菱花白",
+      "candidateNames": [
+        "3.8cm全遮光菱花白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12032"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光薄雾灰",
+      "candidateNames": [
+        "3.8cm全遮光薄雾灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12035"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光蛋霜白",
+      "candidateNames": [
+        "3.8cm全遮光蛋霜白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12037"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光焦糖色",
+      "candidateNames": [
+        "3.8cm全遮光焦糖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12038"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光奶咖色",
+      "candidateNames": [
+        "3.8cm全遮光奶咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12039"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光奶油杏",
+      "candidateNames": [
+        "3.8cm全遮光奶油杏"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12051"
+      ],
+      "productCategory": "",
+      "searchText": "日夜帘白纱",
+      "candidateNames": [
+        "日夜帘白纱"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12061"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm白纱",
+      "candidateNames": [
+        "3.8cm白纱"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12081"
+      ],
+      "productCategory": "",
+      "searchText": "防水全遮光星沙白",
+      "candidateNames": [
+        "防水全遮光星沙白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12082"
+      ],
+      "productCategory": "",
+      "searchText": "防水全遮光幻影灰",
+      "candidateNames": [
+        "防水全遮光幻影灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12085"
+      ],
+      "productCategory": "",
+      "searchText": "防水全遮光香草奶油",
+      "candidateNames": [
+        "防水全遮光香草奶油"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12088"
+      ],
+      "productCategory": "",
+      "searchText": "防水全遮光燕麦卡其",
+      "candidateNames": [
+        "防水全遮光燕麦卡其"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12091"
+      ],
+      "productCategory": "",
+      "searchText": "2.0cm全遮光白色",
+      "candidateNames": [
+        "2.0cm全遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12092"
+      ],
+      "productCategory": "",
+      "searchText": "2.0cm全遮光深蓝色",
+      "candidateNames": [
+        "2.0cm全遮光深蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12093"
+      ],
+      "productCategory": "",
+      "searchText": "2.0cm全遮光浅蓝色",
+      "candidateNames": [
+        "2.0cm全遮光浅蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12099"
+      ],
+      "productCategory": "",
+      "searchText": "2.0cm全遮光米色",
+      "candidateNames": [
+        "2.0cm全遮光米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12100"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光黑色",
+      "candidateNames": [
+        "半遮光黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12101"
+      ],
+      "productCategory": "",
+      "searchText": "防水半遮光棉云白",
+      "candidateNames": [
+        "防水半遮光棉云白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12102"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光灰色",
+      "candidateNames": [
+        "半遮光灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12103"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光海盐蓝",
+      "candidateNames": [
+        "半遮光海盐蓝"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12105"
+      ],
+      "productCategory": "",
+      "searchText": "防水半遮光落日色",
+      "candidateNames": [
+        "防水半遮光落日色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12106"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光时光绿",
+      "candidateNames": [
+        "半遮光时光绿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12107"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光波普粉",
+      "candidateNames": [
+        "半遮光波普粉"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12108"
+      ],
+      "productCategory": "",
+      "searchText": "防水半遮光晚霞色",
+      "candidateNames": [
+        "防水半遮光晚霞色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12109"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光月瓷白",
+      "candidateNames": [
+        "半遮光月瓷白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12119"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光奶杏色",
+      "candidateNames": [
+        "全遮光奶杏色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12123"
+      ],
+      "productCategory": "",
+      "searchText": "防水半遮光薄荷色",
+      "candidateNames": [
+        "防水半遮光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12131"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹半遮光雪绒白",
+      "candidateNames": [
+        "3.8缎纹半遮光雪绒白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12132"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹半遮光清雅灰",
+      "candidateNames": [
+        "3.8缎纹半遮光清雅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12135"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹半遮光法式杏",
+      "candidateNames": [
+        "3.8缎纹半遮光法式杏"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12151"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm半遮光厚云白",
+      "candidateNames": [
+        "3.8cm半遮光厚云白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12152"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm半遮光迷雾灰",
+      "candidateNames": [
+        "3.8cm半遮光迷雾灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12155"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm半遮光奶杏色",
+      "candidateNames": [
+        "3.8cm半遮光奶杏色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12161"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹全遮光月光白",
+      "candidateNames": [
+        "3.8缎纹全遮光月光白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12162"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹全遮光云烟灰",
+      "candidateNames": [
+        "3.8缎纹全遮光云烟灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12165"
+      ],
+      "productCategory": "",
+      "searchText": "3.8缎纹全遮光奶茶色",
+      "candidateNames": [
+        "3.8缎纹全遮光奶茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12181"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm孔中孔白色",
+      "candidateNames": [
+        "3.8cm孔中孔白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12185"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm孔中孔米色",
+      "candidateNames": [
+        "3.8cm孔中孔米色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12191"
+      ],
+      "productCategory": "",
+      "searchText": "2.0cm半遮光白色",
+      "candidateNames": [
+        "2.0cm半遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12201"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm半遮光仿麻",
+      "candidateNames": [
+        "3.8cm半遮光仿麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12211"
+      ],
+      "productCategory": "",
+      "searchText": "3.8cm全遮光仿麻",
+      "candidateNames": [
+        "3.8cm全遮光仿麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12223"
+      ],
+      "productCategory": "",
+      "searchText": "防水全遮光薄荷色",
+      "candidateNames": [
+        "防水全遮光薄荷色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12251"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光暖云白",
+      "candidateNames": [
+        "半遮光暖云白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12261"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光暖云白",
+      "candidateNames": [
+        "全遮光暖云白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12262"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光布纹灰",
+      "candidateNames": [
+        "全遮光布纹灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "12265"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光奶沙杏",
+      "candidateNames": [
+        "全遮光奶沙杏"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13002"
+      ],
+      "productCategory": "",
+      "searchText": "防水云雾灰半遮光",
+      "candidateNames": [
+        "防水云雾灰半遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13005"
+      ],
+      "productCategory": "",
+      "searchText": "防水淡雅米半遮光",
+      "candidateNames": [
+        "防水淡雅米半遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13010"
+      ],
+      "productCategory": "",
+      "searchText": "高定款雅致黑",
+      "candidateNames": [
+        "高定款雅致黑"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13011"
+      ],
+      "productCategory": "",
+      "searchText": "防眩网白色",
+      "candidateNames": [
+        "防眩网白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13012"
+      ],
+      "productCategory": "",
+      "searchText": "防眩网灰色",
+      "candidateNames": [
+        "防眩网灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13015"
+      ],
+      "productCategory": "",
+      "searchText": "防眩网米黄色",
+      "candidateNames": [
+        "防眩网米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13051"
+      ],
+      "productCategory": "",
+      "searchText": "防水月光白半遮光",
+      "candidateNames": [
+        "防水月光白半遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13061"
+      ],
+      "productCategory": "",
+      "searchText": "7.5cm半遮光白色",
+      "candidateNames": [
+        "7.5cm半遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13071"
+      ],
+      "productCategory": "",
+      "searchText": "7.5cm防眩网白色",
+      "candidateNames": [
+        "7.5cm防眩网白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13081"
+      ],
+      "productCategory": "",
+      "searchText": "7.5cm半遮光轻雾白",
+      "candidateNames": [
+        "7.5cm半遮光轻雾白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13091"
+      ],
+      "productCategory": "",
+      "searchText": "7.5cm高遮光白色",
+      "candidateNames": [
+        "7.5cm高遮光白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13101"
+      ],
+      "productCategory": "",
+      "searchText": "仿麻白半遮光",
+      "candidateNames": [
+        "仿麻白半遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13111"
+      ],
+      "productCategory": "",
+      "searchText": "6.5cm防眩网白色",
+      "candidateNames": [
+        "6.5cm防眩网白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13112"
+      ],
+      "productCategory": "",
+      "searchText": "6.5cm防眩网灰色",
+      "candidateNames": [
+        "6.5cm防眩网灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13115"
+      ],
+      "productCategory": "",
+      "searchText": "6.5cm防眩网米黄色",
+      "candidateNames": [
+        "6.5cm防眩网米黄色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13131"
+      ],
+      "productCategory": "",
+      "searchText": "7.5cm半遮光仿麻白",
+      "candidateNames": [
+        "7.5cm半遮光仿麻白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13161"
+      ],
+      "productCategory": "",
+      "searchText": "白色高遮光",
+      "candidateNames": [
+        "白色高遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13162"
+      ],
+      "productCategory": "",
+      "searchText": "灰色全遮光",
+      "candidateNames": [
+        "灰色全遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13166"
+      ],
+      "productCategory": "",
+      "searchText": "香槟色高遮光",
+      "candidateNames": [
+        "香槟色高遮光"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13211"
+      ],
+      "productCategory": "",
+      "searchText": "高遮6.5防眩网云雾白",
+      "candidateNames": [
+        "高遮6.5防眩网云雾白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "13215"
+      ],
+      "productCategory": "",
+      "searchText": "高遮6.5防眩网暖杏黄",
+      "candidateNames": [
+        "高遮6.5防眩网暖杏黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16001"
+      ],
+      "productCategory": "",
+      "searchText": "透景平纹奶油白色",
+      "candidateNames": [
+        "透景平纹奶油白色",
+        "【半遮光-透景】平纹奶油白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16008"
+      ],
+      "productCategory": "",
+      "searchText": "透景天然亚麻米黄",
+      "candidateNames": [
+        "透景天然亚麻米黄",
+        "【半遮光-透景】天然亚麻米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16021"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光立体肌理月光白",
+      "candidateNames": [
+        "半遮光立体肌理月光白",
+        "【半遮光-浮光】立体肌理月光白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16025"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光立体肌理奶茶色",
+      "candidateNames": [
+        "半遮光立体肌理奶茶色",
+        "【半遮光-浮光】立体肌理奶茶色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16031"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光肌理横纹初晨白",
+      "candidateNames": [
+        "半遮光肌理横纹初晨白",
+        "【半遮光-疏影】肌理横纹初晨白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16055"
+      ],
+      "productCategory": "",
+      "searchText": "透景天然麻感本色",
+      "candidateNames": [
+        "透景天然麻感本色",
+        "【半遮光-透景】天然麻感本色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16061"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光麻感编织素静白",
+      "candidateNames": [
+        "半遮光麻感编织素静白",
+        "【半遮光-疏影】麻感编织素静白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16065"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光轻奢横纹米白色",
+      "candidateNames": [
+        "半遮光轻奢横纹米白色",
+        "【半遮光-浮光】轻奢横纹米白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16068"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光麻感编织奶咖色",
+      "candidateNames": [
+        "半遮光麻感编织奶咖色",
+        "【半遮光-疏影】麻感编织奶咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16071"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光细纹亚麻",
+      "candidateNames": [
+        "半遮光细纹亚麻",
+        "【半遮光-疏影】细纹亚麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16081"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光羽白色",
+      "candidateNames": [
+        "全遮光羽白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16085"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光淡雅米",
+      "candidateNames": [
+        "全遮光淡雅米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16088"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光防麻白",
+      "candidateNames": [
+        "全遮光防麻白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16095"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻淡奶米",
+      "candidateNames": [
+        "全遮光细麻淡奶米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16098"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光细麻高级灰",
+      "candidateNames": [
+        "全遮光细麻高级灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16101"
+      ],
+      "productCategory": "",
+      "searchText": "特惠半遮光绵柔云朵白",
+      "candidateNames": [
+        "特惠半遮光绵柔云朵白",
+        "【半遮光-绵柔】云朵白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16102"
+      ],
+      "productCategory": "",
+      "searchText": "特惠半遮光绵柔薄暮灰",
+      "candidateNames": [
+        "特惠半遮光绵柔薄暮灰",
+        "【半遮光-绵柔】薄暮灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16105"
+      ],
+      "productCategory": "",
+      "searchText": "特惠半遮光绵柔奶杏米",
+      "candidateNames": [
+        "特惠半遮光绵柔奶杏米",
+        "【半遮光-绵柔】奶杏米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16111"
+      ],
+      "productCategory": "",
+      "searchText": "透景竹节纹云雾白",
+      "candidateNames": [
+        "透景竹节纹云雾白",
+        "【半遮光-透景】竹节纹云雾白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16115"
+      ],
+      "productCategory": "",
+      "searchText": "透景竹节纹亚麻色",
+      "candidateNames": [
+        "透景竹节纹亚麻色",
+        "【半遮光-透景】竹节纹亚麻色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16120"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光极简墨韵",
+      "candidateNames": [
+        "半遮光极简墨韵"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16121"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光法式枝叶",
+      "candidateNames": [
+        "半遮光法式枝叶",
+        "【半遮光-浮光】法式枝叶"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16135"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光羊绒质感香草奶油",
+      "candidateNames": [
+        "全遮光羊绒质感香草奶油"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16138"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光羊绒质感燕麦卡其",
+      "candidateNames": [
+        "全遮光羊绒质感燕麦卡其"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16151"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光粗纹亚麻",
+      "candidateNames": [
+        "半遮光粗纹亚麻",
+        "【半遮光-疏影】粗纹亚麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16155"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光天然麻感本色",
+      "candidateNames": [
+        "半遮光天然麻感本色",
+        "【半遮光-疏影】天然麻感本色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16162"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光意式线条",
+      "candidateNames": [
+        "全遮光意式线条"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16175"
+      ],
+      "productCategory": "",
+      "searchText": "全遮光天然麻感本色",
+      "candidateNames": [
+        "全遮光天然麻感本色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16501"
+      ],
+      "productCategory": "",
+      "searchText": "透景清晞云白",
+      "candidateNames": [
+        "透景清晞云白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16511"
+      ],
+      "productCategory": "",
+      "searchText": "轻柔手感半遮光澄光雅白",
+      "candidateNames": [
+        "轻柔手感半遮光澄光雅白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16515"
+      ],
+      "productCategory": "",
+      "searchText": "轻柔手感半遮光浅杏绵米",
+      "candidateNames": [
+        "轻柔手感半遮光浅杏绵米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16521"
+      ],
+      "productCategory": "",
+      "searchText": "麻纹肌理半遮光云上舞白",
+      "candidateNames": [
+        "麻纹肌理半遮光云上舞白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16522"
+      ],
+      "productCategory": "",
+      "searchText": "麻纹肌理半遮光清屿浅灰",
+      "candidateNames": [
+        "麻纹肌理半遮光清屿浅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16525"
+      ],
+      "productCategory": "",
+      "searchText": "麻纹肌理半遮光柔风杏米",
+      "candidateNames": [
+        "麻纹肌理半遮光柔风杏米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16551"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光素朴原麻",
+      "candidateNames": [
+        "半遮光素朴原麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16555"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光温杏雅麻",
+      "candidateNames": [
+        "半遮光温杏雅麻"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16581"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光凝霜夜白",
+      "candidateNames": [
+        "高遮光凝霜夜白"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16582"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光墨屿雅灰",
+      "candidateNames": [
+        "高遮光墨屿雅灰"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "16588"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光暖檀柔米",
+      "candidateNames": [
+        "高遮光暖檀柔米"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "18001"
+      ],
+      "productCategory": "",
+      "searchText": "月白蝶舞",
+      "candidateNames": [
+        "月白蝶舞"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "18005"
+      ],
+      "productCategory": "",
+      "searchText": "鹅黄寻蝶",
+      "candidateNames": [
+        "鹅黄寻蝶"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "18021"
+      ],
+      "productCategory": "",
+      "searchText": "米绒蝶姿",
+      "candidateNames": [
+        "米绒蝶姿"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "18031"
+      ],
+      "productCategory": "",
+      "searchText": "麻纹蝶影",
+      "candidateNames": [
+        "麻纹蝶影"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "20001"
+      ],
+      "productCategory": "",
+      "searchText": "白色",
+      "candidateNames": [
+        "白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "20002"
+      ],
+      "productCategory": "",
+      "searchText": "灰色",
+      "candidateNames": [
+        "灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "20005"
+      ],
+      "productCategory": "",
+      "searchText": "米黄",
+      "candidateNames": [
+        "米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50021"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光方格白色",
+      "candidateNames": [
+        "半遮光方格白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50022"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光方格灰色",
+      "candidateNames": [
+        "半遮光方格灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50025"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光方格肉色",
+      "candidateNames": [
+        "半遮光方格肉色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50028"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光方格咖色",
+      "candidateNames": [
+        "半遮光方格咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50029"
+      ],
+      "productCategory": "",
+      "searchText": "半遮光方格深红",
+      "candidateNames": [
+        "半遮光方格深红"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50082"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色灰色",
+      "candidateNames": [
+        "高遮光纯色灰色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50083"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色蓝色",
+      "candidateNames": [
+        "高遮光纯色蓝色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50085"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色米黄",
+      "candidateNames": [
+        "高遮光纯色米黄"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50087"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色深红",
+      "candidateNames": [
+        "高遮光纯色深红"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "50088"
+      ],
+      "productCategory": "",
+      "searchText": "高遮光纯色咖色",
+      "candidateNames": [
+        "高遮光纯色咖色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "81001"
+      ],
+      "productCategory": "",
+      "searchText": "薄轨白色",
+      "candidateNames": [
+        "薄轨白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "81011"
+      ],
+      "productCategory": "",
+      "searchText": "纳米条直轨白色",
+      "candidateNames": [
+        "纳米条直轨白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "81081"
+      ],
+      "productCategory": "",
+      "searchText": "坚美直轨白色",
+      "candidateNames": [
+        "坚美直轨白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "81088"
+      ],
+      "productCategory": "",
+      "searchText": "坚美直轨香槟",
+      "candidateNames": [
+        "坚美直轨香槟"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "88031"
+      ],
+      "productCategory": "",
+      "searchText": "弯轨白色",
+      "candidateNames": [
+        "弯轨白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "88091"
+      ],
+      "productCategory": "",
+      "searchText": "薄弯轨白色",
+      "candidateNames": [
+        "薄弯轨白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "89090"
+      ],
+      "productCategory": "",
+      "searchText": "坚美罗马杆黑色",
+      "candidateNames": [
+        "坚美罗马杆黑色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "89091"
+      ],
+      "productCategory": "",
+      "searchText": "坚美罗马杆白色",
+      "candidateNames": [
+        "坚美罗马杆白色"
+      ],
+      "status": "confirmed"
+    },
+    {
+      "aliases": [
+        "89098"
+      ],
+      "productCategory": "",
+      "searchText": "坚美罗马杆香槟色",
+      "candidateNames": [
+        "坚美罗马杆香槟色"
+      ],
+      "status": "confirmed"
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>订单录入工作台</title>
+<style>
+  :root {
+    --bg: #F7F7F5;
+    --panel: #FFFFFF;
+    --line: #E5E4DF;
+    --line-strong: #D3D1C7;
+    --text: #2C2C2A;
+    --muted: #5F5E5A;
+    --hint: #888780;
+    --blue-bg: #E6F1FB; --blue: #185FA5; --blue-dark: #0C447C;
+    --teal-bg: #E1F5EE; --teal: #0F6E56; --teal-dark: #085041;
+    --amber-bg: #FAEEDA; --amber: #BA7517; --amber-dark: #633806;
+    --red-bg: #FCEBEB; --red: #A32D2D;
+    --green-bg: #EAF3DE; --green: #3B6D11;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 13px; line-height: 1.6;
+  }
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 16px; font-weight: 500; margin: 0; }
+  h2 { font-size: 13px; font-weight: 500; margin: 0 0 10px; color: var(--muted); }
+
+  .topbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 12px 16px; margin-bottom: 12px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--hint); display: inline-block; margin-right: 6px; }
+  .dot.on { background: var(--green); }
+  .dot.busy { background: var(--amber); }
+  .dot.off { background: var(--hint); }
+  .grow { flex: 1; }
+
+  button {
+    font: inherit; font-weight: 500; cursor: pointer;
+    border: 1px solid var(--line-strong); background: var(--panel); color: var(--text);
+    padding: 6px 14px; border-radius: 8px;
+  }
+  button:hover:not(:disabled) { border-color: var(--muted); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  button.primary { background: var(--blue-bg); border-color: var(--blue); color: var(--blue-dark); }
+  button.go { background: var(--teal-bg); border-color: var(--teal); color: var(--teal-dark); }
+  button.danger { background: var(--red-bg); border-color: var(--red); color: var(--red); }
+  input[type=text] {
+    font: inherit; padding: 6px 10px; border: 1px solid var(--line-strong);
+    border-radius: 8px; background: var(--panel); color: var(--text); width: 100%;
+  }
+  label.chk { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); cursor: pointer; user-select: none; }
+
+  .steps { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+  .step {
+    font-size: 11px; padding: 2px 7px; border-radius: 20px;
+    background: var(--bg); border: 1px solid var(--line); color: var(--hint);
+    white-space: nowrap;
+  }
+  .step.done { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+  .step.active { background: var(--amber-bg); border-color: var(--amber); color: var(--amber-dark); font-weight: 500; }
+
+  .grid { display: grid; grid-template-columns: minmax(340px, 420px) 1fr; gap: 12px; }
+  @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 14px;
+  }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .row + .row { margin-top: 8px; }
+
+  .card { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-top: 12px; }
+  .card-head {
+    background: var(--blue-bg); color: var(--blue-dark);
+    padding: 8px 12px; font-weight: 500; font-size: 13px;
+  }
+  .kv { display: grid; grid-template-columns: 84px 1fr; gap: 2px 10px; padding: 10px 12px; }
+  .kv dt { color: var(--hint); }
+  .kv dd { margin: 0; word-break: break-all; }
+  .kv dd b { font-weight: 500; }
+  .tag {
+    display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 20px;
+    background: var(--bg); border: 1px solid var(--line); margin: 0 4px 3px 0; color: var(--muted);
+  }
+  .tag.warn { background: var(--amber-bg); border-color: var(--amber); color: var(--amber-dark); }
+  .tag.bad { background: var(--red-bg); border-color: var(--red); color: var(--red); }
+  .tag.ok { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+
+  .log {
+    font-family: Consolas, "Courier New", monospace; font-size: 12px; line-height: 1.55;
+    background: #FCFCFB; border: 1px solid var(--line); border-radius: 8px;
+    height: 420px; overflow-y: auto; padding: 10px 12px; white-space: pre-wrap; word-break: break-all;
+  }
+  .log .l { color: var(--text); }
+  .log .l.err { color: var(--red); }
+  .log .l.sys { color: var(--hint); font-style: italic; }
+  .log .l.step { color: var(--blue); font-weight: 500; }
+  .log .l.ok { color: var(--green); font-weight: 500; }
+  .log .l.warn { color: var(--amber-dark); }
+
+  .banner {
+    border-radius: 8px; padding: 10px 12px; margin-bottom: 12px;
+    border: 1px solid var(--line); display: none;
+  }
+  .banner.show { display: block; }
+  .banner.error { background: var(--red-bg); border-color: var(--red); color: var(--red); }
+  .banner.info { background: var(--amber-bg); border-color: var(--amber); color: var(--amber-dark); }
+  .banner.ok { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+
+  .tabs { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tabs button.active { background: var(--blue-bg); border-color: var(--blue); color: var(--blue-dark); }
+  .result { max-height: 300px; overflow-y: auto; margin-top: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--hint); font-weight: 500; position: sticky; top: 0; background: var(--panel); }
+  code { font-family: Consolas, monospace; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
+  .empty { color: var(--hint); padding: 16px 0; text-align: center; }
+  .hintline { color: var(--hint); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <h1>订单录入工作台</h1>
+    <span><span id="dot" class="dot off"></span><span id="connText">连接中…</span></span>
+    <span class="grow"></span>
+    <div class="steps" id="steps"></div>
+    <button id="btnStart" class="primary">启动会话</button>
+    <button id="btnStop" disabled>停止会话</button>
+  </div>
+
+  <div id="banner" class="banner"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>订单操作</h2>
+      <div class="row">
+        <input type="text" id="orderId" placeholder="订单号，留空 = 读取当前勾选那单">
+      </div>
+      <div class="row">
+        <button id="btnRun" class="primary" disabled>识别订单</button>
+        <label class="chk"><input type="checkbox" id="autoConfirm"> 自动确认（跳过 Y/N）</label>
+      </div>
+      <div class="hintline" style="margin-top:8px">识别后先看下面这张卡片核对，再决定是否录入。</div>
+
+      <div id="cardWrap"></div>
+      <div class="row" id="confirmRow" style="display:none">
+        <button id="btnYes" class="go">确认录入并审核</button>
+        <button id="btnNo" class="danger">取消本单</button>
+      </div>
+      <div id="pendingWrap" style="margin-top:12px"></div>
+    </div>
+
+    <div class="panel">
+      <h2>实时日志（11 步）</h2>
+      <div class="log" id="log"></div>
+      <div class="row" style="margin-top:8px">
+        <button id="btnClearLog">清空显示</button>
+        <span class="hintline" id="logHint">失败原因会直接显示在这里（原来的黑终端看不到 stderr）</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:12px">
+    <h2>物料 / 配色查询</h2>
+    <div class="row">
+      <input type="text" id="q" placeholder="输货号、颜色中文或色号，例如：6010 / 亮光白 / 米黄 / 7265" style="flex:1;min-width:240px">
+      <button id="btnSearch" class="primary">查询</button>
+    </div>
+    <div class="tabs" style="margin-top:10px" id="tabs">
+      <button data-tab="materials" class="active">物料库</button>
+      <button data-tab="hood">帘罩配色</button>
+      <button data-tab="tracks">蜂巢轨道</button>
+      <button data-tab="mainPictures">主图款</button>
+    </div>
+    <div class="result" id="result"><div class="empty">输入关键词开始查询</div></div>
+  </div>
+
+</div>
+
+<script>
+const STEP_NAMES = ["订单读取","物料推导","主表录入","主表保存","选品搜索","弹窗选品","明细填写","橙色保存","ERP回写","订单审核","自动就绪"];
+const $ = (id) => document.getElementById(id);
+let state = {};
+let autoConfirmBusy = false;
+let lastOrder = null;
+let activeTab = "materials";
+let lastSearch = null;
+
+function esc(s) { return String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function money(v) { return v === null || v === undefined || v === "" ? "—" : "¥" + v; }
+
+function renderSteps(step) {
+  const cur = step ? step.index : 0;
+  $("steps").innerHTML = STEP_NAMES.map((name, i) => {
+    const n = i + 1;
+    const cls = cur === 0 ? "" : (n < cur ? "done" : (n === cur ? "active" : ""));
+    return `<span class="step ${cls}" title="${esc(name)}">${n}</span>`;
+  }).join("");
+}
+
+function banner(kind, text) {
+  const el = $("banner");
+  if (!kind) { el.className = "banner"; return; }
+  el.className = "banner show " + kind;
+  el.textContent = text;
+}
+
+function setConn(cls, text) {
+  $("dot").className = "dot " + cls;
+  $("connText").textContent = text;
+}
+
+function applyState(s) {
+  state = s;
+  const running = !!s.running;
+  $("btnStart").disabled = running;
+  $("btnStop").disabled = !running;
+  $("btnRun").disabled = !running;
+  setConn(running ? (s.awaiting ? "busy" : "on") : "off", running ? (s.awaiting?.kind === "confirm" ? "等待确认" : "会话运行中") : "会话未启动");
+  renderSteps(s.step || null);
+
+  if (s.error) banner("error", s.error);
+  else if (s.pendingMark?.orderId) banner("info", `断点未清：订单 ${s.pendingMark.orderId} 的报价单已保存，但 ERP 回写没走完。重跑该单会自动跳过出单、只补回写。`);
+  else if (running && s.awaiting?.kind === "idle") banner("ok", "就绪，可以识别下一单。");
+  else banner(null);
+
+  if (s.order) renderCard(s.order);
+
+  const cw = $("confirmRow");
+  const waiting = running && s.awaiting?.kind === "confirm";
+  cw.style.display = waiting ? "flex" : "none";
+  if (waiting && $("autoConfirm").checked && !autoConfirmBusy) {
+    autoConfirmBusy = true;
+    appendLog({ stream: "sys", text: "» 自动确认已开启，自动放行本单" });
+    fetch("/api/answer", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ value: "Y" }) })
+      .finally(() => setTimeout(() => { autoConfirmBusy = false; }, 1200));
+  }
+  if (!waiting) autoConfirmBusy = false;
+
+  renderPending(s.pendingMark);
+}
+
+function renderPending(pm) {
+  if (!pm?.orderId) { $("pendingWrap").innerHTML = ""; return; }
+  $("pendingWrap").innerHTML = `<div class="hintline">断点文件记录着 <code>${esc(pm.orderId)}</code>
+    <button id="btnClearPending" style="margin-left:8px;padding:2px 10px">清除断点</button></div>`;
+  $("btnClearPending").onclick = () => fetch("/api/pending/clear", { method: "POST" }).then(refresh);
+}
+
+function renderCard(payload) {
+  lastOrder = payload;
+  const p = payload.parsed || {};
+  const m = payload.resolvedMaterial || {};
+  const rows = payload.rows || [];
+  const d0 = rows[0] || {};
+  const dims = (p.dimensionPairs && p.dimensionPairs.length > 1)
+    ? p.dimensionPairs.map((d, i) => `${String.fromCharCode(65 + i)}: ${d.width}m × ${d.height}m`).join("　")
+    : `${p.width}m × ${p.height}m　共 ${p.quantity} 件`;
+  const tags = (arr, cls) => (arr || []).map((x) => `<span class="tag ${cls || ""}">${esc(x)}</span>`).join("") || "<span class=\"hintline\">无</span>";
+  const issues = p.issues || [];
+
+  $("cardWrap").innerHTML = `
+    <div class="card">
+      <div class="card-head">待录入确认</div>
+      <dl class="kv">
+        <dt>订单编号</dt><dd><b>${esc(payload.orderId || "未识别")}</b></dd>
+        <dt>成交金额</dt><dd><b>${money(payload.amount)}</b></dd>
+        <dt>产品款号</dt><dd><b>${esc(p.productCode || "未识别")}</b></dd>
+        <dt>颜色</dt><dd>${tags(p.colors)}</dd>
+        <dt>工艺</dt><dd>${tags(p.crafts)}</dd>
+        <dt>制作尺寸</dt><dd>${esc(dims)}</dd>
+        <dt>目标物料</dt><dd><b>${esc(m.outputText || "未确认")}</b>${m.material?.productCategory ? `<span class="tag">${esc(m.material.productCategory)}</span>` : ""}</dd>
+        <dt>配件配色</dt><dd>${tags([d0.hoodColor && "帘罩: " + d0.hoodColor, d0.trackColor && "轨道: " + d0.trackColor].filter(Boolean))}</dd>
+        <dt>订单备注</dt><dd>${esc(d0.remark || "无")}</dd>
+        ${rows.length > 1 ? `<dt>明细行数</dt><dd><b>${rows.length} 条</b>（多尺寸分幅）</dd>` : ""}
+        ${issues.length ? `<dt>风险提示</dt><dd>${tags(issues, "bad")}</dd>` : `<dt>风险提示</dt><dd><span class="tag ok">无</span></dd>`}
+      </dl>
+    </div>`;
+}
+
+function appendLog(line, cls) {
+  const el = $("log");
+  const div = document.createElement("div");
+  let kind = cls || "";
+  if (!kind) {
+    const t = line.text || "";
+    if (line.stream === "err" || /^本单未完成|^已暂停：|^自动化停止/.test(t)) kind = "err";
+    else if (/^>>>\s*\[Step/.test(t)) kind = "step";
+    else if (/^本单已完成/.test(t)) kind = "ok";
+    else if (line.stream === "sys") kind = "sys";
+    else if (/引擎2容灾|\[ERP激活\]|未勾选|未呼出弹窗/.test(t)) kind = "warn";
+  }
+  div.className = "l " + kind;
+  div.textContent = line.text ?? line;
+  el.appendChild(div);
+  while (el.childElementCount > 1500) el.removeChild(el.firstChild);
+  el.scrollTop = el.scrollHeight;
+}
+
+function refresh() { return fetch("/api/state").then((r) => r.json()).then(applyState); }
+
+function connect() {
+  const es = new EventSource("/api/stream");
+  es.onopen = () => setConn("on", "已连接");
+  es.onerror = () => setConn("off", "连接断开，重试中…");
+  es.onmessage = (ev) => {
+    const msg = JSON.parse(ev.data);
+    if (msg.type === "state") applyState(msg.state);
+    else if (msg.type === "history") { $("log").innerHTML = ""; msg.lines.forEach((l) => appendLog(l)); }
+    else if (msg.type === "line") appendLog(msg.line);
+    else if (msg.type === "step") renderSteps(msg.step);
+    else if (msg.type === "order") renderCard(msg.order);
+    else if (msg.type === "awaiting") { state.awaiting = msg.awaiting; refresh(); }
+    else if (msg.type === "error") banner("error", msg.text);
+    else if (msg.type === "done") banner("ok", msg.text);
+    else if (msg.type === "reset") { $("log").innerHTML = ""; $("cardWrap").innerHTML = ""; lastOrder = null; }
+  };
+}
+
+const post = (url, body) => fetch(url, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(body || {})
+}).then((r) => r.json()).then((res) => {
+  if (res && res.ok === false) banner("error", res.reason || "操作失败");
+  return refresh();
+});
+
+$("btnStart").onclick = () => post("/api/session/start");
+$("btnStop").onclick = () => post("/api/session/stop");
+$("btnRun").onclick = () => post("/api/run", { orderId: $("orderId").value.trim() });
+$("btnYes").onclick = () => post("/api/answer", { value: "Y" });
+$("btnNo").onclick = () => post("/api/answer", { value: "N" });
+$("btnClearLog").onclick = () => { $("log").innerHTML = ""; };
+$("orderId").addEventListener("keydown", (e) => { if (e.key === "Enter") $("btnRun").click(); });
+$("q").addEventListener("keydown", (e) => { if (e.key === "Enter") doSearch(); });
+$("btnSearch").onclick = doSearch;
+document.querySelectorAll("#tabs button").forEach((b) => {
+  b.onclick = () => {
+    activeTab = b.dataset.tab;
+    document.querySelectorAll("#tabs button").forEach((x) => x.classList.toggle("active", x === b));
+    renderResult();
+  };
+});
+
+function doSearch() {
+  const q = $("q").value.trim();
+  if (!q) { $("result").innerHTML = '<div class="empty">输入关键词开始查询</div>'; lastSearch = null; return; }
+  $("result").innerHTML = '<div class="empty">查询中…</div>';
+  fetch("/api/search?q=" + encodeURIComponent(q)).then((r) => r.json()).then((data) => { lastSearch = data; renderResult(); });
+}
+
+function renderResult() {
+  const d = lastSearch;
+  if (!d) return;
+  const el = $("result");
+  if (activeTab === "materials") {
+    if (!d.materials.length) { el.innerHTML = '<div class="empty">没有匹配的物料</div>'; return; }
+    el.innerHTML = `<table><thead><tr><th>货号</th><th>品类</th><th>选品词 / 颜色</th><th>色号</th><th>状态</th></tr></thead><tbody>${
+      d.materials.map((m) => `<tr>
+        <td><b>${esc(m.aliases.join("/"))}</b></td>
+        <td>${esc(m.category || "—")}</td>
+        <td>${m.text ? esc(m.text) : "—"}${m.variants.length ? "<br>" + m.variants.map((v) => `<code>${esc(v.outputText)}</code>`).join(" ") : ""}</td>
+        <td>${m.variants.length ? m.variants.map((v) => esc(v.modelCode || "—")).join("<br>") : "—"}</td>
+        <td>${m.status === "confirmed" ? '<span class="tag ok">已确认</span>' : `<span class="tag warn">${esc(m.status || "未确认")}</span>`}</td>
+      </tr>`).join("")}</tbody></table>`;
+    return;
+  }
+  if (activeTab === "hood") {
+    if (!d.hood.length) { el.innerHTML = '<div class="empty">没有匹配的帘罩配色规则</div>'; return; }
+    el.innerHTML = `<table><thead><tr><th>面料色号</th><th>品类</th><th>面料名</th><th>标致型帘罩</th><th>豪华型帘罩</th></tr></thead><tbody>${
+      d.hood.map((h) => `<tr><td><b>${esc(h.code)}</b></td><td>${esc(h.category)}</td><td>${esc(h.fabricName)}</td><td>${esc(h.standardHood)}</td><td>${esc(h.deluxeHood)}</td></tr>`).join("")}</tbody></table>`;
+    return;
+  }
+  if (activeTab === "tracks") {
+    if (!d.tracks.length) { el.innerHTML = '<div class="empty">没有匹配的轨道规则</div>'; return; }
+    el.innerHTML = `<table><thead><tr><th>面料色号</th><th>豪华轨</th><th>无拉绳轨</th></tr></thead><tbody>${
+      d.tracks.map((t) => `<tr><td><b>${esc(t.code)}</b></td><td>${esc(t.deluxeTrack || "—")}</td><td>${esc(t.cordlessTrack || "—")}</td></tr>`).join("")}</tbody></table>`;
+    return;
+  }
+  if (!d.mainPictures.length) { el.innerHTML = '<div class="empty">没有匹配的主图款</div>'; return; }
+  el.innerHTML = `<table><thead><tr><th>款号</th><th>车间色号</th><th>完整描述</th></tr></thead><tbody>${
+    d.mainPictures.map((p) => `<tr><td><b>${esc(p.code)}</b></td><td>${esc(p.modelCode || "—")}</td><td>${esc(p.fullDescription || "—")}</td></tr>`).join("")}</tbody></table>`;
+}
+
+connect();
+refresh();
+</script>
+</body>
+</html>
