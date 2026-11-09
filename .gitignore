@@ -1,6 +1,7 @@
 # 本机登录状态与运行数据
 browser-profile/
 logs/
+data/audit/
 live-terminal.log
 startup-error.log
 pending-order*.json

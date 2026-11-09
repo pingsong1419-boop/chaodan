@@ -7,8 +7,12 @@ import { buildDetailRows, detectDoNotCopyInstruction, parseAmount, parseOrderTex
 import { recordDualDecision, extractSpecFragment } from "./ai-dual.js";
 import { matchSelectionCatalogFromText } from "./catalog-match.js";
 import { buildOrderLinePlans, linePlanBlockers } from "./order-line-plans.js";
+import { AuditStore } from "./audit-store.js";
+import { BatchQueue, createBatchId } from "./batch-queue.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const packageVersion = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8")).version || "unknown";
+const auditStore = new AuditStore(path.join(root, "data", "audit", "order-automation.db"), { version: packageVersion });
 const selectionCatalogPath = path.join(root, "data", "selection-catalog.index.json");
 const selectionCatalog = fs.existsSync(selectionCatalogPath)
   ? JSON.parse(fs.readFileSync(selectionCatalogPath, "utf8")).records || []
@@ -32,6 +36,7 @@ const auditLogPath = path.join(logsDir, "test-execution-audit.log");
 
 function logStep(stepIndex, totalSteps, actionName, details = "") {
   const prefix = `>>> [Step ${stepIndex}/${totalSteps} ${actionName}]`;
+  if (currentAuditContext) auditStore.event({ ...currentAuditContext, step: `step-${stepIndex}-${actionName}`, phase: "success", payload: { details } });
   const message = details ? `${prefix} ${details}` : prefix;
   console.log(message);
   try {
@@ -85,6 +90,7 @@ function processedOrderBlockers(text) {
 async function confirmWorkflowStep(page, stepNumber, actionName, details = "") {
   const sequence = WORKFLOW_ORDER.indexOf(stepNumber) + 1;
   if (!page || sequence <= 0) throw new Error(`未知人工确认步骤：${stepNumber}`);
+  if (currentAuditContext) auditStore.event({ ...currentAuditContext, step: `step-${stepNumber}-${actionName}`, phase: "authorized", executor: "user_confirm", payload: { sequence, details } });
   if (config.confirmEveryStep === false) {
     console.log(`[连续执行 ${sequence}/11] 步骤 ${stepNumber} ${actionName}：已由订单总确认授权，自动继续`);
     return;
@@ -180,7 +186,9 @@ async function withHumanTakeover(page, actionName, action, afterHuman = null) {
     return await action();
   } catch (error) {
     console.error(`[自动步骤失败] ${actionName}：${error.message}`);
+    if (currentAuditContext) auditStore.event({ ...currentAuditContext, step: actionName, phase: "automation_failed", error: error.message });
     await requestHumanTakeover(page, actionName, error.message);
+    if (currentAuditContext) auditStore.event({ ...currentAuditContext, step: actionName, phase: "human_completed", executor: "human_takeover" });
     return afterHuman ? await afterHuman() : undefined;
   }
 }
@@ -249,6 +257,10 @@ let checkedOrderMonitorBusy = false;
 let lastCheckedOrderSignature = "";
 let checkedOrderMonitorArmed = false;
 const savedVoucherOrders = new Map();
+const batchStatePath = path.join(root, "data", "audit", "active-batch.json");
+let activeBatchQueue = null;
+let currentAuditContext = null;
+let lastCheckedOrderChangedAt = 0;
 
 function enqueueBrowserCommand(command) {
   if (browserCommandResolver) {
@@ -308,6 +320,7 @@ function installOrderClickListener() {
   }, true);
 
   window.__codexShowCheckedOrderConfirm = async (checkbox) => {
+    if (window.__codexBatchSelecting) return;
     if (!checkbox || !checkbox.checked) return;
     if (checkbox.closest("thead, th, .el-table__header, .ant-table-header")) return;
     const row = checkbox.closest("._jt_row, tr, [role='row']");
@@ -378,9 +391,63 @@ function installOrderClickListener() {
     document.addEventListener("keydown", onKey, true);
     (info.ready ? confirmButton : cancelButton).focus();
   };
+
+  window.__codexShowBatchConfirm = async () => {
+    if (window.__codexBatchSelecting || typeof window.__codexPrepareCheckedOrder !== "function") return;
+    const checkboxes = [...document.querySelectorAll("input._jt_cbx:checked")].filter((node) => !node.closest("thead, th"));
+    if (checkboxes.length < 2) return;
+    const infos = [];
+    for (const checkbox of checkboxes) {
+      const row = checkbox.closest("._jt_row, tr, [role='row']");
+      const rowText = (row?.innerText || "").trim();
+      const orderId = rowText.match(/\b\d{7}\b/)?.[0];
+      if (!orderId) continue;
+      const sellerMemo = row.querySelector('._jt_cell[data-id="remark"]')?.getAttribute("title") ?? null;
+      const visibleRows = [...document.querySelectorAll("._jt_row, tr, [role='row']")].filter((node) => /\b\d{7}\b/.test(node.innerText || ""));
+      const visibleIndex = rowText.match(/^\s*(\d{1,4})\s+/)?.[1] || Math.max(1, visibleRows.indexOf(row) + 1);
+      infos.push(await window.__codexPrepareCheckedOrder({ orderId, rowText, visibleIndex, sellerMemo }));
+    }
+    infos.sort((a, b) => Number(a.sequence || 999999) - Number(b.sequence || 999999));
+    if (infos.length < 2) return;
+    document.getElementById("codex-order-confirm")?.remove();
+    document.getElementById("codex-batch-confirm")?.remove();
+    const overlay = document.createElement("div");
+    overlay.id = "codex-batch-confirm";
+    overlay.style.cssText = "position:fixed;inset:0;z-index:2147483647;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-family:Microsoft YaHei,sans-serif";
+    const card = document.createElement("div");
+    card.style.cssText = "width:900px;max-width:94vw;max-height:86vh;overflow:auto;background:#fff;border-radius:12px;padding:24px;box-shadow:0 18px 55px rgba(0,0,0,.4);color:#222;font-size:14px";
+    const safe = (value) => String(value ?? "").replace(/[&<>\"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]));
+    const allReady = infos.every((info) => info.ready);
+    const rows = infos.map((info, index) => `<tr><td>${index + 1}</td><td>${safe(info.sequence)}</td><td>${safe(info.orderId)}</td><td>${safe(info.product)}</td><td>${safe(info.size)}</td><td style="color:${info.ready ? "#16803c" : "#c62828"}">${safe(info.status)}</td></tr>`).join("");
+    card.innerHTML = `<div style="font-size:22px;font-weight:700">连续抄单预检：${infos.length}笔</div>
+      <div style="margin:8px 0 14px;color:#555">执行顺序按页面序号排列。开始后聚水潭始终只勾选当前正在处理的一单。</div>
+      <table style="width:100%;border-collapse:collapse"><thead><tr><th>#</th><th>页面序号</th><th>订单号</th><th>商品</th><th>尺寸</th><th>状态</th></tr></thead><tbody>${rows}</tbody></table>
+      <div style="margin-top:14px;color:${allReady ? "#16803c" : "#c62828"};font-weight:700">${allReady ? "全部预检通过，可以连续抄单" : "存在不可抄订单，请取消后重新选择"}</div>
+      <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:18px"><button id="codex-batch-cancel" style="padding:9px 22px">取消</button><button id="codex-batch-go" ${allReady ? "" : "disabled"} style="padding:9px 22px;background:#1677ff;color:white;border:0;border-radius:5px;opacity:${allReady ? 1 : .45}">开始连续抄单</button></div>`;
+    card.querySelectorAll("th,td").forEach((cell) => cell.style.cssText += ";border:1px solid #ddd;padding:7px;text-align:left;vertical-align:top");
+    overlay.appendChild(card); document.body.appendChild(overlay);
+    card.querySelector("#codex-batch-cancel").onclick = () => overlay.remove();
+    card.querySelector("#codex-batch-go").onclick = async () => {
+      if (!allReady) return;
+      const button = card.querySelector("#codex-batch-go"); button.disabled = true;
+      window.__codexBatchSelecting = true;
+      for (const checkbox of checkboxes) { checkbox.checked = false; checkbox.dispatchEvent(new Event("change", { bubbles: true })); }
+      window.__codexBatchSelecting = false;
+      overlay.remove();
+      await window.__codexConfirmBatch(infos);
+    };
+  };
+
+  let codexSelectionTimer = null;
   document.addEventListener("change", (event) => {
     const checkbox = event.target instanceof HTMLInputElement && event.target.type === "checkbox" ? event.target : null;
-    if (checkbox) window.__codexShowCheckedOrderConfirm(checkbox);
+    if (!checkbox || window.__codexBatchSelecting) return;
+    clearTimeout(codexSelectionTimer);
+    codexSelectionTimer = setTimeout(() => {
+      const checked = [...document.querySelectorAll("input._jt_cbx:checked")].filter((node) => !node.closest("thead, th"));
+      if (checked.length > 1) window.__codexShowBatchConfirm();
+      else if (checked.length === 1) window.__codexShowCheckedOrderConfirm(checked[0]);
+    }, 900);
   }, true);
 }
 
@@ -439,6 +506,27 @@ async function setupOrderClickTracking(browserContext) {
       status: blockers.length ? `已拦截：${blockers.join("；")}` : hasPendingResume ? `检测到未完成断点，将继续凭证 ${pendingResume.voucher || "待恢复"}` : "参数完整，可以抄单"
     };
   });
+  await browserContext.exposeBinding("__codexConfirmBatch", async (source, infos) => {
+    if (activeBatchQueue && !["completed", "paused"].includes(activeBatchQueue.status)) throw new Error("已有连续抄单批次正在执行");
+    const orders = Array.isArray(infos) ? infos.filter((info) => info?.ready && /^\d{7}$/.test(String(info.orderId))) : [];
+    if (orders.length < 2 || orders.length !== infos.length) throw new Error("批量预检未全部通过");
+    const batchId = createBatchId();
+    activeBatchQueue = new BatchQueue({ batchId, orders });
+    auditStore.createBatch({ batchId, mode: "continuous", orders, summary: { source: "erp-checkboxes" } });
+    persistActiveBatch();
+    console.log(`[连续抄单] 批次 ${batchId} 已建立，共 ${orders.length} 笔，开始按页面序号执行`);
+    try {
+      await scheduleNextBatchOrder(source.frame);
+      return true;
+    } catch (error) {
+      activeBatchQueue.pauseCurrent(error.message);
+      persistActiveBatch();
+      auditStore.finishBatch(batchId, { status: "paused", summary: { error: error.message } });
+      const erpPage = context.pages().find((page) => page.url().includes(config.erpUrlPattern));
+      await showBatchProgress(erpPage, { error: error.message });
+      throw error;
+    }
+  });
   await browserContext.exposeBinding("__codexConfirmCheckedOrder", (_source, orderId) => {
     const id = String(orderId || "");
     if (!/^\d{7}$/.test(id)) return false;
@@ -456,6 +544,75 @@ async function setupOrderClickTracking(browserContext) {
   }
 }
 
+
+function persistActiveBatch() {
+  if (!activeBatchQueue) return;
+  fs.mkdirSync(path.dirname(batchStatePath), { recursive: true });
+  fs.writeFileSync(batchStatePath, JSON.stringify(activeBatchQueue.snapshot(), null, 2), "utf8");
+}
+
+async function showBatchProgress(page, { completed = false, error = "" } = {}) {
+  if (!activeBatchQueue || !page) return;
+  const snapshot = activeBatchQueue.snapshot();
+  await page.evaluate(({ snapshot, completed, error }) => {
+    document.getElementById("codex-batch-progress")?.remove();
+    const panel = document.createElement("div"); panel.id = "codex-batch-progress";
+    panel.style.cssText = "position:fixed;right:24px;top:24px;z-index:2147483646;width:390px;max-height:80vh;overflow:auto;background:#fff;border:2px solid #1677ff;border-radius:10px;padding:16px;box-shadow:0 12px 36px rgba(0,0,0,.28);font-family:Microsoft YaHei,sans-serif;font-size:14px";
+    const icon = { completed: "✅", running: "▶", queued: "○", paused: "⏸" };
+    panel.innerHTML = `<div style="font-size:19px;font-weight:700">${completed ? "连续抄单完成" : error ? "连续抄单已暂停" : `连续抄单 ${snapshot.items.filter((x) => x.status === "completed").length}/${snapshot.items.length}`}</div>` +
+      snapshot.items.map((item) => `<div style="padding:4px 0;color:${item.status === "paused" ? "#c62828" : "#333"}">${icon[item.status] || "○"} ${item.queueIndex}. ${item.orderId}　${item.status}</div>`).join("") +
+      (error ? `<div style="margin-top:8px;color:#c62828">${String(error).replace(/[&<>]/g, "")}</div>` : "");
+    document.body.appendChild(panel);
+    if (completed) setTimeout(() => panel.remove(), 15000);
+  }, { snapshot, completed, error }).catch(() => {});
+}
+
+async function scheduleNextBatchOrder(frameHint = null) {
+  if (!activeBatchQueue || !["ready", "running"].includes(activeBatchQueue.status)) return;
+  const next = activeBatchQueue.startNext();
+  persistActiveBatch();
+  const erpPage = context.pages().find((page) => page.url().includes(config.erpUrlPattern));
+  if (!next) {
+    auditStore.finishBatch(activeBatchQueue.batchId, { status: "completed", summary: { completed: activeBatchQueue.completedCount, total: activeBatchQueue.total } });
+    if (fs.existsSync(batchStatePath)) fs.unlinkSync(batchStatePath);
+    await showBatchProgress(erpPage, { completed: true });
+    console.log(`[连续抄单] 批次 ${activeBatchQueue.batchId} 全部完成：${activeBatchQueue.completedCount}/${activeBatchQueue.total}`);
+    return;
+  }
+  let targetFrame = frameHint;
+  let checkbox = null;
+  for (const page of context.pages()) {
+    if (!page.url().includes(config.erpUrlPattern)) continue;
+    for (const frame of page.frames()) {
+      if (!frame.url().includes("/app/order/order/list.aspx")) continue;
+      const orderCell = frame.getByText(next.orderId, { exact: true }).first();
+      if (!await orderCell.count().catch(() => 0)) continue;
+      const row = orderCell.locator("xpath=ancestor::*[contains(concat(' ',normalize-space(@class),' '),' _jt_row ')][1] | xpath=ancestor::tr[1] | xpath=ancestor::*[@role='row'][1]").first();
+      const candidate = row.locator("input._jt_cbx, input[type='checkbox']").first();
+      if (await candidate.count().catch(() => 0)) { targetFrame = frame; checkbox = candidate; break; }
+    }
+    if (checkbox) break;
+  }
+  if (!checkbox || !targetFrame) throw new Error(`连续队列无法在当前查询池定位订单 ${next.orderId}`);
+  await targetFrame.evaluate(() => {
+    window.__codexBatchSelecting = true;
+    document.querySelectorAll("input._jt_cbx:checked").forEach((node) => { node.checked = false; node.dispatchEvent(new Event("change", { bubbles: true })); });
+    window.__codexBatchSelecting = false;
+  });
+  await checkbox.evaluate((node) => {
+    window.__codexBatchSelecting = true; node.checked = true; node.dispatchEvent(new Event("change", { bubbles: true })); window.__codexBatchSelecting = false;
+  });
+  const prepared = preparedOrderSnapshots.get(next.orderId);
+  if (prepared) { prepared.frame = targetFrame; prepared.preparedAt = Date.now(); }
+  browserConfirmedOrders.add(next.orderId);
+  browserConfirmStartedAt.set(next.orderId, Date.now());
+  currentAuditContext = { batchId: activeBatchQueue.batchId, orderId: next.orderId };
+  auditStore.startOrder(activeBatchQueue.batchId, next.orderId, next);
+  await showBatchProgress(erpPage);
+  enqueueBrowserCommand(`RUN ${next.orderId}`);
+  console.log(`[连续抄单] 开始第 ${next.queueIndex}/${activeBatchQueue.total} 笔：${next.orderId}`);
+}
+
 function startCheckedOrderMonitor(browserContext) {
   const timer = setInterval(async () => {
     if (checkedOrderMonitorBusy) return;
@@ -468,7 +625,10 @@ function startCheckedOrderMonitor(browserContext) {
           const checked = frame.locator("input._jt_cbx:checked");
           const count = await checked.count().catch(() => 0);
           if (count !== 1) {
-            found = count > 1 ? { signature: `multiple:${count}`, frame, checkbox: null } : null;
+            if (count > 1) {
+              const orderIds = await checked.evaluateAll((nodes) => nodes.map((node) => node.closest("._jt_row, tr, [role='row']")?.innerText?.match(/\b\d{7}\b/)?.[0] || "").filter(Boolean));
+              found = { signature: `multiple:${orderIds.join(",")}`, frame, checkbox: null, orderIds };
+            } else found = null;
             continue;
           }
           const checkbox = checked.first();
@@ -492,13 +652,20 @@ function startCheckedOrderMonitor(browserContext) {
         lastCheckedOrderSignature = signature;
         return;
       }
-      if (signature === lastCheckedOrderSignature) return;
-      lastCheckedOrderSignature = signature;
+      if (activeBatchQueue && ["ready", "running"].includes(activeBatchQueue.status)) return;
+      if (signature !== lastCheckedOrderSignature) {
+        lastCheckedOrderSignature = signature;
+        lastCheckedOrderChangedAt = Date.now();
+        return;
+      }
+      if (Date.now() - lastCheckedOrderChangedAt < 900) return;
+      lastCheckedOrderChangedAt = Number.MAX_SAFE_INTEGER;
       if (found.checkbox) {
         console.log(`[勾选信号] 检测到唯一勾选订单 ${signature.slice(4)}，正在显示确认卡片...`);
         await found.checkbox.evaluate((node) => window.__codexShowCheckedOrderConfirm?.(node));
       } else {
-        console.log(`[勾选信号] 检测到同时勾选多笔订单，已停止弹出抄单确认。`);
+        console.log(`[勾选信号] 检测到同时勾选 ${found.orderIds?.length || 0} 笔订单，正在显示连续抄单预检...`);
+        await found.frame.evaluate(() => window.__codexShowBatchConfirm?.());
       }
     } catch { }
     finally { checkedOrderMonitorBusy = false; }
@@ -2129,6 +2296,13 @@ async function main() {
       if (resumeOnly && !isValidResume) throw new Error(`订单 ${orderId || "未识别"} 没有可继续的断点记录`);
       const amount = parseAmount(text);
       const browserPreconfirmed = browserConfirmedOrders.delete(String(orderId));
+      const executionStartedAt = Date.now();
+      if (!previewOnly && !currentAuditContext) {
+        const batchId = createBatchId();
+        auditStore.createBatch({ batchId, mode: "single", orders: [{ orderId, amount }] });
+        currentAuditContext = { batchId, orderId };
+        auditStore.startOrder(batchId, orderId, { amount, mode: "single" });
+      }
       const linePlans = buildOrderLinePlans(text, selectionCatalog, mappings.materials);
       const allCatalogUnique = linePlans.length > 0 && linePlans.every((plan) => plan.catalogMatch.status === "unique" && plan.resolvedMaterial);
       // 单值仅兼容既有日志；每条报价明细实际使用所属规格段的权威目录。
@@ -2136,6 +2310,13 @@ async function main() {
       const resolvedMaterial = linePlans[0]?.resolvedMaterial || null;
       const ruleResolved = resolveMaterialText(parsed, mappings.materials);
       let rows = linePlans.flatMap((plan) => plan.rows);
+      if (!previewOnly && currentAuditContext) auditStore.event({ ...currentAuditContext, step: "order-snapshot", phase: "captured", payload: {
+        rawText: text,
+        sellerMemo: selectedOrder.sellerMemo || "",
+        amount,
+        parsed,
+        linePlans: linePlans.map((plan) => ({ segment: plan.segment, catalogStatus: plan.catalogMatch.status, catalog: plan.catalogMatch.match || null, selection: plan.resolvedMaterial?.outputText || "", rows: plan.rows }))
+      } });
       if (!previewOnly) console.log(`[订单准备] ${orderId} | ¥${amount} | ${resolvedMaterial?.outputText || "未确认"} | ${rows.length}条明细`);
 
       // 保留提取结果和目录裁决日志，供后续核查与改进提取器。
@@ -2175,14 +2356,26 @@ async function main() {
 
       if (!previewOnly) {
         if (!allCatalogUnique) {
+          const reason = linePlanBlockers(linePlans).join("；") || "订单规格段未全部唯一命中权威目录";
           logDecision("catalog-blocked", { outputText: "" });
-          console.log(`已暂停：${linePlanBlockers(linePlans).join("；") || "订单规格段未全部唯一命中权威目录"}。未执行任何录入。`);
+          if (activeBatchQueue && currentAuditContext?.batchId === activeBatchQueue.batchId) throw new Error(`执行前复核失败：${reason}`);
+          if (currentAuditContext) {
+            auditStore.finishOrder(currentAuditContext.batchId, orderId, { status: "blocked", error: reason });
+            auditStore.finishBatch(currentAuditContext.batchId, { status: "blocked", summary: { reason } });
+            currentAuditContext = null;
+          }
+          console.log(`已暂停：${reason}。未执行任何录入。`);
           console.log("READY_FOR_NEXT_ORDER");
           continue;
         }
         const confirmInput = browserPreconfirmed ? "Y" : (await input.question("确认执行录入并自动审核？(输入 Y 确认 / 输入 N 取消): ")).trim().toUpperCase();
         if (confirmInput !== "Y") {
           logDecision("cancel");
+          if (currentAuditContext) {
+            auditStore.finishOrder(currentAuditContext.batchId, orderId, { status: "cancelled", result: { reason: "user_cancelled" } });
+            auditStore.finishBatch(currentAuditContext.batchId, { status: "cancelled", summary: { orderId } });
+            currentAuditContext = null;
+          }
           console.log(`操作已安全取消。未对订单 ${orderId} 执行任何录入或审核操作。`);
           console.log("READY_FOR_NEXT_ORDER");
           continue;
@@ -2218,7 +2411,14 @@ async function main() {
         : [...processedOrderBlockers(text), ...processedOrderBlockers(selectedOrder.sellerMemo || "")];
       const blockers = [...new Set([...processedBlockers, ...linePlanBlockers(linePlans), ...(!orderId ? ["未识别订单号"] : []), ...(!amount ? ["未识别成交金额"] : [])])];
       if (blockers.length) {
-        console.log(`已暂停：${blockers.join("；")}`);
+        const reason = blockers.join("；");
+        if (activeBatchQueue && currentAuditContext?.batchId === activeBatchQueue.batchId) throw new Error(`执行前复核失败：${reason}`);
+        if (currentAuditContext) {
+          auditStore.finishOrder(currentAuditContext.batchId, orderId, { status: "blocked", error: reason });
+          auditStore.finishBatch(currentAuditContext.batchId, { status: "blocked", summary: { reason } });
+          currentAuditContext = null;
+        }
+        console.log(`已暂停：${reason}`);
       } else {
         await confirmWorkflowStep(erp, 1, "订单读取", `订单号：${orderId}\n成交金额：¥${amount}\n款号：${parsed.productCode}\n尺寸：${parsed.width}m × ${parsed.height}m\n件数：${parsed.quantity}`);
         logStep(1, 11, "订单读取", `订单号: ${orderId} | 已付金额: ¥${amount} | 款号: ${parsed.productCode} | 颜色: ${parsed.colors.join("/") || "未指定"} | 尺寸: ${parsed.width}m × ${parsed.height}m | 工艺: [${parsed.crafts.join(", ")}]`);
@@ -2329,14 +2529,37 @@ async function main() {
         if (!config.dryRun && pendingMark.remarkSuccess && pendingMark.auditSuccess && pendingMark.quoteSuccess) {
           await confirmWorkflowStep(erp, 11, "自动就绪", `取消订单 ${orderId} 的勾选并结束本单。`);
           await withHumanTakeover(erp, "取消已完成订单勾选", () => uncheckProcessedOrder(selectedOrder.checkbox, erp, orderId, selectedOrder.frame));
-          await showCompletionNotice(erp, { orderId, voucher: pendingMark.voucher, detailCount: rows.length });
           fs.unlinkSync(pendingMarkPath);
+          if (currentAuditContext) auditStore.finishOrder(currentAuditContext.batchId, orderId, { status: "completed", voucher: pendingMark.voucher, detailCount: rows.length, durationMs: Date.now() - executionStartedAt, result: { amount, selections: linePlans.map((plan) => plan.resolvedMaterial?.outputText), rows } });
+          if (activeBatchQueue && activeBatchQueue.current()?.orderId === String(orderId)) {
+            activeBatchQueue.completeCurrent({ voucher: pendingMark.voucher, detailCount: rows.length });
+            persistActiveBatch();
+            currentAuditContext = null;
+            await showBatchProgress(erp);
+            await scheduleNextBatchOrder(selectedOrder.frame);
+          } else {
+            if (currentAuditContext) auditStore.finishBatch(currentAuditContext.batchId, { status: "completed", summary: { orderId, voucher: pendingMark.voucher } });
+            currentAuditContext = null;
+            await showCompletionNotice(erp, { orderId, voucher: pendingMark.voucher, detailCount: rows.length });
+          }
           console.log("============================================================");
           console.log(`✅ 抄单完成 | 订单 ${orderId} | 凭证 ${pendingMark.voucher || "已保存"} | 明细 ${rows.length} 条`);
           console.log("============================================================");
         }
       }
     } catch (error) {
+      if (currentAuditContext) {
+        const belongsToActiveBatch = Boolean(activeBatchQueue && currentAuditContext.batchId === activeBatchQueue.batchId);
+        auditStore.finishOrder(currentAuditContext.batchId, currentAuditContext.orderId, { status: belongsToActiveBatch ? "paused" : "failed", error: error.message });
+        if (belongsToActiveBatch) {
+          activeBatchQueue.pauseCurrent(error.message);
+          persistActiveBatch();
+          auditStore.finishBatch(activeBatchQueue.batchId, { status: "paused", summary: { error: error.message, currentOrder: currentAuditContext.orderId } });
+          const erpPage = context.pages().find((page) => page.url().includes(config.erpUrlPattern));
+          await showBatchProgress(erpPage, { error: error.message });
+        } else auditStore.finishBatch(currentAuditContext.batchId, { status: "failed", summary: { error: error.message } });
+        currentAuditContext = null;
+      }
       if (/用户在步骤.+停止本单|人工接管步骤.+已停止本单/.test(String(error.message || ""))) {
         if (fs.existsSync(pendingMarkPath)) fs.unlinkSync(pendingMarkPath);
         console.log("用户已结束本单：本地断点记录已删除，不再保留续做状态。");
@@ -2346,6 +2569,7 @@ async function main() {
     console.log("READY_FOR_NEXT_ORDER");
   }
   await context.close();
+  auditStore.close();
   await input.close();
 }
 

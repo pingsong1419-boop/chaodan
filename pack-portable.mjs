@@ -26,6 +26,7 @@ function addTree(sourceDir, targetDir, filter = () => true) {
 
 addTree(path.join(project, "src"), "src", (source) => !/index\.(?:corrupted-backup|baseline-serial-).*\.js$/i.test(source));
 addTree(path.join(project, "node_modules"), "node_modules");
+addFile(path.join(project, "scripts", "audit-report.mjs"), path.join("scripts", "audit-report.mjs"));
 for (const name of ["knowledge-rules.json", "material-map.json", "selection-catalog.index.json", "selection-catalog.summary.json", "motor-remote-authority.json"]) {
   addFile(path.join(project, "data", name), path.join("data", name));
 }

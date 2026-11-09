@@ -1,0 +1,46 @@
+
+  window.__codexShowBatchConfirm = async () => {
+    if (window.__codexBatchSelecting || typeof window.__codexPrepareCheckedOrder !== "function") return;
+    const checkboxes = [...document.querySelectorAll("input._jt_cbx:checked")].filter((node) => !node.closest("thead, th"));
+    if (checkboxes.length < 2) return;
+    const infos = [];
+    for (const checkbox of checkboxes) {
+      const row = checkbox.closest("._jt_row, tr, [role='row']");
+      const rowText = (row?.innerText || "").trim();
+      const orderId = rowText.match(/\b\d{7}\b/)?.[0];
+      if (!orderId) continue;
+      const sellerMemo = row.querySelector('._jt_cell[data-id="remark"]')?.getAttribute("title") ?? null;
+      const visibleRows = [...document.querySelectorAll("._jt_row, tr, [role='row']")].filter((node) => /\b\d{7}\b/.test(node.innerText || ""));
+      const visibleIndex = rowText.match(/^\s*(\d{1,4})\s+/)?.[1] || Math.max(1, visibleRows.indexOf(row) + 1);
+      infos.push(await window.__codexPrepareCheckedOrder({ orderId, rowText, visibleIndex, sellerMemo }));
+    }
+    infos.sort((a, b) => Number(a.sequence || 999999) - Number(b.sequence || 999999));
+    if (infos.length < 2) return;
+    document.getElementById("codex-order-confirm")?.remove();
+    document.getElementById("codex-batch-confirm")?.remove();
+    const overlay = document.createElement("div");
+    overlay.id = "codex-batch-confirm";
+    overlay.style.cssText = "position:fixed;inset:0;z-index:2147483647;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-family:Microsoft YaHei,sans-serif";
+    const card = document.createElement("div");
+    card.style.cssText = "width:900px;max-width:94vw;max-height:86vh;overflow:auto;background:#fff;border-radius:12px;padding:24px;box-shadow:0 18px 55px rgba(0,0,0,.4);color:#222;font-size:14px";
+    const safe = (value) => String(value ?? "").replace(/[&<>\"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]));
+    const allReady = infos.every((info) => info.ready);
+    const rows = infos.map((info, index) => `<tr><td>${index + 1}</td><td>${safe(info.sequence)}</td><td>${safe(info.orderId)}</td><td>${safe(info.product)}</td><td>${safe(info.size)}</td><td style="color:${info.ready ? "#16803c" : "#c62828"}">${safe(info.status)}</td></tr>`).join("");
+    card.innerHTML = `<div style="font-size:22px;font-weight:700">连续抄单预检：${infos.length}笔</div>
+      <div style="margin:8px 0 14px;color:#555">执行顺序按页面序号排列。开始后聚水潭始终只勾选当前正在处理的一单。</div>
+      <table style="width:100%;border-collapse:collapse"><thead><tr><th>#</th><th>页面序号</th><th>订单号</th><th>商品</th><th>尺寸</th><th>状态</th></tr></thead><tbody>${rows}</tbody></table>
+      <div style="margin-top:14px;color:${allReady ? "#16803c" : "#c62828"};font-weight:700">${allReady ? "全部预检通过，可以连续抄单" : "存在不可抄订单，请取消后重新选择"}</div>
+      <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:18px"><button id="codex-batch-cancel" style="padding:9px 22px">取消</button><button id="codex-batch-go" ${allReady ? "" : "disabled"} style="padding:9px 22px;background:#1677ff;color:white;border:0;border-radius:5px;opacity:${allReady ? 1 : .45}">开始连续抄单</button></div>`;
+    card.querySelectorAll("th,td").forEach((cell) => cell.style.cssText += ";border:1px solid #ddd;padding:7px;text-align:left;vertical-align:top");
+    overlay.appendChild(card); document.body.appendChild(overlay);
+    card.querySelector("#codex-batch-cancel").onclick = () => overlay.remove();
+    card.querySelector("#codex-batch-go").onclick = async () => {
+      if (!allReady) return;
+      const button = card.querySelector("#codex-batch-go"); button.disabled = true;
+      window.__codexBatchSelecting = true;
+      for (const checkbox of checkboxes) { checkbox.checked = false; checkbox.dispatchEvent(new Event("change", { bubbles: true })); }
+      window.__codexBatchSelecting = false;
+      overlay.remove();
+      await window.__codexConfirmBatch(infos);
+    };
+  };

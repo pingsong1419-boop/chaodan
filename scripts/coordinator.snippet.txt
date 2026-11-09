@@ -1,0 +1,68 @@
+
+function persistActiveBatch() {
+  if (!activeBatchQueue) return;
+  fs.mkdirSync(path.dirname(batchStatePath), { recursive: true });
+  fs.writeFileSync(batchStatePath, JSON.stringify(activeBatchQueue.snapshot(), null, 2), "utf8");
+}
+
+async function showBatchProgress(page, { completed = false, error = "" } = {}) {
+  if (!activeBatchQueue || !page) return;
+  const snapshot = activeBatchQueue.snapshot();
+  await page.evaluate(({ snapshot, completed, error }) => {
+    document.getElementById("codex-batch-progress")?.remove();
+    const panel = document.createElement("div"); panel.id = "codex-batch-progress";
+    panel.style.cssText = "position:fixed;right:24px;top:24px;z-index:2147483646;width:390px;max-height:80vh;overflow:auto;background:#fff;border:2px solid #1677ff;border-radius:10px;padding:16px;box-shadow:0 12px 36px rgba(0,0,0,.28);font-family:Microsoft YaHei,sans-serif;font-size:14px";
+    const icon = { completed: "✅", running: "▶", queued: "○", paused: "⏸" };
+    panel.innerHTML = `<div style="font-size:19px;font-weight:700">${completed ? "连续抄单完成" : error ? "连续抄单已暂停" : `连续抄单 ${snapshot.items.filter((x) => x.status === "completed").length}/${snapshot.items.length}`}</div>` +
+      snapshot.items.map((item) => `<div style="padding:4px 0;color:${item.status === "paused" ? "#c62828" : "#333"}">${icon[item.status] || "○"} ${item.queueIndex}. ${item.orderId}　${item.status}</div>`).join("") +
+      (error ? `<div style="margin-top:8px;color:#c62828">${String(error).replace(/[&<>]/g, "")}</div>` : "");
+    document.body.appendChild(panel);
+    if (completed) setTimeout(() => panel.remove(), 15000);
+  }, { snapshot, completed, error }).catch(() => {});
+}
+
+async function scheduleNextBatchOrder(frameHint = null) {
+  if (!activeBatchQueue || !["ready", "running"].includes(activeBatchQueue.status)) return;
+  const next = activeBatchQueue.startNext();
+  persistActiveBatch();
+  const erpPage = context.pages().find((page) => page.url().includes(config.erpUrlPattern));
+  if (!next) {
+    auditStore.finishBatch(activeBatchQueue.batchId, { status: "completed", summary: { completed: activeBatchQueue.completedCount, total: activeBatchQueue.total } });
+    if (fs.existsSync(batchStatePath)) fs.unlinkSync(batchStatePath);
+    await showBatchProgress(erpPage, { completed: true });
+    console.log(`[连续抄单] 批次 ${activeBatchQueue.batchId} 全部完成：${activeBatchQueue.completedCount}/${activeBatchQueue.total}`);
+    return;
+  }
+  let targetFrame = frameHint;
+  let checkbox = null;
+  for (const page of context.pages()) {
+    if (!page.url().includes(config.erpUrlPattern)) continue;
+    for (const frame of page.frames()) {
+      if (!frame.url().includes("/app/order/order/list.aspx")) continue;
+      const orderCell = frame.getByText(next.orderId, { exact: true }).first();
+      if (!await orderCell.count().catch(() => 0)) continue;
+      const row = orderCell.locator("xpath=ancestor::*[contains(concat(' ',normalize-space(@class),' '),' _jt_row ')][1] | xpath=ancestor::tr[1] | xpath=ancestor::*[@role='row'][1]").first();
+      const candidate = row.locator("input._jt_cbx, input[type='checkbox']").first();
+      if (await candidate.count().catch(() => 0)) { targetFrame = frame; checkbox = candidate; break; }
+    }
+    if (checkbox) break;
+  }
+  if (!checkbox || !targetFrame) throw new Error(`连续队列无法在当前查询池定位订单 ${next.orderId}`);
+  await targetFrame.evaluate(() => {
+    window.__codexBatchSelecting = true;
+    document.querySelectorAll("input._jt_cbx:checked").forEach((node) => { node.checked = false; node.dispatchEvent(new Event("change", { bubbles: true })); });
+    window.__codexBatchSelecting = false;
+  });
+  await checkbox.evaluate((node) => {
+    window.__codexBatchSelecting = true; node.checked = true; node.dispatchEvent(new Event("change", { bubbles: true })); window.__codexBatchSelecting = false;
+  });
+  const prepared = preparedOrderSnapshots.get(next.orderId);
+  if (prepared) { prepared.frame = targetFrame; prepared.preparedAt = Date.now(); }
+  browserConfirmedOrders.add(next.orderId);
+  browserConfirmStartedAt.set(next.orderId, Date.now());
+  currentAuditContext = { batchId: activeBatchQueue.batchId, orderId: next.orderId };
+  auditStore.startOrder(activeBatchQueue.batchId, next.orderId, next);
+  await showBatchProgress(erpPage);
+  enqueueBrowserCommand(`RUN ${next.orderId}`);
+  console.log(`[连续抄单] 开始第 ${next.queueIndex}/${activeBatchQueue.total} 笔：${next.orderId}`);
+}
