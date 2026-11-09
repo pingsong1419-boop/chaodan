@@ -4,6 +4,7 @@ logs/
 live-terminal.log
 startup-error.log
 pending-order*.json
+data/abandoned/
 
 # 依赖与构建/验证产物
 node_modules/
@@ -11,6 +12,11 @@ runtime/
 dist/
 verify_*/
 *.zip
+*.tsd-corrupted-*
+*.corrupted-backup.js
+*.baseline-serial-*.js
+*.bak-*
+*.before-sync-*.json
 
 # 本机配置（仓库保留 config.example.json）
 config.json
